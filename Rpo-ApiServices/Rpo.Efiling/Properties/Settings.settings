@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Rpo.Efiling.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DropboxAccessToken" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NJowicEk-_AAAAAAAAACocU1XBWOh83Em4u-IgnYUUzP0IJO6cOrr-_00btpmZyq</Value>
+    </Setting>
+    <Setting Name="DropboxExternalUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.dropbox.com/home/CORJOBDOCS</Value>
+    </Setting>
+    <Setting Name="DropboxFolderPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/CORJOBDOCS/</Value>
+    </Setting>
+    <Setting Name="DropboxNamespaceId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">4530242832</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

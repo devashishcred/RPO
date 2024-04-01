@@ -1,0 +1,216 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Rpo.ApiServices.Api.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SmtpPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="SmtpAuthenticationEnabled" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SmtpUseSSl" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UploadedDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Documents</Value>
+    </Setting>
+    <Setting Name="ContactDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/ContactDocuments</Value>
+    </Setting>
+    <Setting Name="ComanyDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/ComanyDocuments</Value>
+    </Setting>
+    <Setting Name="ContactImagePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/ContactImages</Value>
+    </Setting>
+    <Setting Name="EmployeeDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/EmployeeDocument</Value>
+    </Setting>
+    <Setting Name="RFPAttachmentsPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/RFPAttachments</Value>
+    </Setting>
+    <Setting Name="TaskReminderSchedulerStart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RFPInDraftNotifyAdminSchedulerStart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RfpTwoDaysInDraftUserSchedulerMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="CompanyAttachmentsPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/CompanyAttachments</Value>
+    </Setting>
+    <Setting Name="ContactAttachmentsPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/ContactAttachments</Value>
+    </Setting>
+    <Setting Name="JobTrasmittalAttachmentsPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/JobTrasmittalAttachments</Value>
+    </Setting>
+    <Setting Name="TaskReminderSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">07</Value>
+    </Setting>
+    <Setting Name="TaskReminderSchedulerMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">03</Value>
+    </Setting>
+    <Setting Name="RFPInDraftNotifyAdminSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">07</Value>
+    </Setting>
+    <Setting Name="RFPInDraftNotifyAdminSchedulerMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">08</Value>
+    </Setting>
+    <Setting Name="RfpTwoDaysInDraftUserSchedulerStart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RfpTwoDaysInDraftUserSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">07</Value>
+    </Setting>
+    <Setting Name="RfpTwoDaysSubmittedUserSchedulerStart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RfpTwoDaysSubmittedUserSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">07</Value>
+    </Setting>
+    <Setting Name="RfpTwoDaysSubmittedUserSchedulerMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="ProposalFileExportPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/UploadedDocuments/ExportedProposal/</Value>
+    </Setting>
+    <Setting Name="RFPDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/RFPDocuments</Value>
+    </Setting>
+    <Setting Name="JobDocumentExportPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments\JobDocument\</Value>
+    </Setting>
+    <Setting Name="JobDocumentTemplatePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">JobDocumentPDFTemplate\</Value>
+    </Setting>
+    <Setting Name="APIUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.20:8085/</Value>
+    </Setting>
+    <Setting Name="JobViolationDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/JobViolationDocuments</Value>
+    </Setting>
+    <Setting Name="TransmittalJobDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/TransmittalJobDocuments</Value>
+    </Setting>
+    <Setting Name="JobDocumentAttachmentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/JobDocumentsAttachment</Value>
+    </Setting>
+    <Setting Name="DOTWorkPermitDocument" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/DOTWorkPermitDocument</Value>
+    </Setting>
+    <Setting Name="TempDocument" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/TempDocument</Value>
+    </Setting>
+    <Setting Name="TaskDocumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/TaskDocuments</Value>
+    </Setting>
+    <Setting Name="JobTrasmittalPreviewPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/JobTrasmittalPreview</Value>
+    </Setting>
+    <Setting Name="CompanyExpiryUpdateSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">07</Value>
+    </Setting>
+    <Setting Name="ReportExcelExportPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">UploadedDocuments/ReportExportToExcel/</Value>
+    </Setting>
+    <Setting Name="ExportToExcelTemplatePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ExportToExcelTemplate/</Value>
+    </Setting>
+    <Setting Name="AddPageTemplatePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">JobDocumentAddPageTemplate/</Value>
+    </Setting>
+    <Setting Name="DropboxAccessToken" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">vQ2vJ-qfUXIAAAAAAABSXj6jT_W8xojU2uJ7x_o__EE-qv8FxBRD9Dx1Hnc4tz3-</Value>
+    </Setting>
+    <Setting Name="DropboxExternalUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.dropbox.com/home/COR_JOBDOCS_QA_UAT_LOCAL</Value>
+    </Setting>
+    <Setting Name="DropboxFolderPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/COR_JOBDOCS_QA_UAT_LOCAL/</Value>
+    </Setting>
+    <Setting Name="DropboxNamespaceId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FrontEndUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.20:8000/</Value>
+    </Setting>
+    <Setting Name="IsSnapcor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No</Value>
+    </Setting>
+    <Setting Name="IsUAT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">No</Value>
+    </Setting>
+    <Setting Name="SmtpHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="SmtpUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ithelp@credencys.com</Value>
+    </Setting>
+    <Setting Name="SmtpPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Cred#123)(*</Value>
+    </Setting>
+    <Setting Name="CompanyExpiryUpdateSchedulerMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="JobViolationUpdateDeveloperEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rposupportgroup@credencys.com;</Value>
+    </Setting>
+    <Setting Name="JobECBViolationUpdateSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="JobViolationUpdateSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+    <Setting Name="CronjobUpdateDeveloperEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">posupportgroup@credencys.com;</Value>
+    </Setting>
+    <Setting Name="CronjobTimeZone" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">India Standard Time</Value>
+    </Setting>
+    <Setting Name="JobDOBViolationUpdateSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="JobDobNowApplicationUpdateSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">35</Value>
+    </Setting>
+    <Setting Name="JobDOBUpdateSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+    <Setting Name="JobDobApplicationUpdateSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+    <Setting Name="JobDobApplicationUpdateSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">04</Value>
+    </Setting>
+    <Setting Name="JobPermitStatusSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">01</Value>
+    </Setting>
+    <Setting Name="JobPermitStatusSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+    <Setting Name="JobECBViolationUpdateSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">04</Value>
+    </Setting>
+    <Setting Name="JobDOBViolationUpdateSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">03</Value>
+    </Setting>
+    <Setting Name="JobViolationUpdateSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">05</Value>
+    </Setting>
+    <Setting Name="JobDobNowApplicationUpdateSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">08</Value>
+    </Setting>
+    <Setting Name="JobDOBUpdateSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">06</Value>
+    </Setting>
+    <Setting Name="JobCustomerReminderSchedulerHour" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="JobCustomerReminderSchedulerHourMinute" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">55</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

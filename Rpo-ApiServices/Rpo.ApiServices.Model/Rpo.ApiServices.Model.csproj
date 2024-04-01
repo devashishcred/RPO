@@ -1,0 +1,2609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5D1AE9B-EC2E-4E52-B47B-D3D3AD15D58E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rpo.ApiServices.Model</RootNamespace>
+    <AssemblyName>Rpo.ApiServices.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UAT|AnyCPU'">
+    <OutputPath>bin\UAT\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.1.0.1\lib\net451\Microsoft.Extensions.ObjectPool.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\202309240435121_prodmigration.cs" />
+    <Compile Include="Migrations\202309240435121_prodmigration.Designer.cs">
+      <DependentUpon>202309240435121_prodmigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402140709397_cuimigration.cs" />
+    <Compile Include="Migrations\202402140709397_cuimigration.Designer.cs">
+      <DependentUpon>202402140709397_cuimigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ChecklistAddressPropertyMaping.cs" />
+    <Compile Include="Migrations\201710042357492_Initial.cs" />
+    <Compile Include="Migrations\201710042357492_Initial.Designer.cs">
+      <DependentUpon>201710042357492_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710061407299_CompanyContact.cs" />
+    <Compile Include="Migrations\201710061407299_CompanyContact.Designer.cs">
+      <DependentUpon>201710061407299_CompanyContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710061754062_ContactLicense_Number_toString.cs" />
+    <Compile Include="Migrations\201710061754062_ContactLicense_Number_toString.Designer.cs">
+      <DependentUpon>201710061754062_ContactLicense_Number_toString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710081504030_CompanyFix.cs" />
+    <Compile Include="Migrations\201710081504030_CompanyFix.Designer.cs">
+      <DependentUpon>201710081504030_CompanyFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710161108289_Aditional_Group_Grants.cs" />
+    <Compile Include="Migrations\201710161108289_Aditional_Group_Grants.Designer.cs">
+      <DependentUpon>201710161108289_Aditional_Group_Grants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710181441296_Correcting_Companies.cs" />
+    <Compile Include="Migrations\201710181441296_Correcting_Companies.Designer.cs">
+      <DependentUpon>201710181441296_Correcting_Companies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710251616124_Employee_NewFields.cs" />
+    <Compile Include="Migrations\201710251616124_Employee_NewFields.Designer.cs">
+      <DependentUpon>201710251616124_Employee_NewFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710251618269_Company_NewFields.cs" />
+    <Compile Include="Migrations\201710251618269_Company_NewFields.Designer.cs">
+      <DependentUpon>201710251618269_Company_NewFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710301618101_Employee_AdditionalGrants.cs" />
+    <Compile Include="Migrations\201710301618101_Employee_AdditionalGrants.Designer.cs">
+      <DependentUpon>201710301618101_Employee_AdditionalGrants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710311724018_Masters_Grant_GroupAndEmployee.cs" />
+    <Compile Include="Migrations\201710311724018_Masters_Grant_GroupAndEmployee.Designer.cs">
+      <DependentUpon>201710311724018_Masters_Grant_GroupAndEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711012220575_RfpInitial.cs" />
+    <Compile Include="Migrations\201711012220575_RfpInitial.Designer.cs">
+      <DependentUpon>201711012220575_RfpInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711041314473_CompanyRfpAddress.cs" />
+    <Compile Include="Migrations\201711041314473_CompanyRfpAddress.Designer.cs">
+      <DependentUpon>201711041314473_CompanyRfpAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711041656378_Project-Details.cs" />
+    <Compile Include="Migrations\201711041656378_Project-Details.Designer.cs">
+      <DependentUpon>201711041656378_Project-Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711051216531_BoroughRfpAddress.cs" />
+    <Compile Include="Migrations\201711051216531_BoroughRfpAddress.Designer.cs">
+      <DependentUpon>201711051216531_BoroughRfpAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711060114265_ScopeReview.cs" />
+    <Compile Include="Migrations\201711060114265_ScopeReview.Designer.cs">
+      <DependentUpon>201711060114265_ScopeReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711060152551_ProposalReview.cs" />
+    <Compile Include="Migrations\201711060152551_ProposalReview.Designer.cs">
+      <DependentUpon>201711060152551_ProposalReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711070148136_generalChanges.cs" />
+    <Compile Include="Migrations\201711070148136_generalChanges.Designer.cs">
+      <DependentUpon>201711070148136_generalChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711091358096_RfpModifiedDate.cs" />
+    <Compile Include="Migrations\201711091358096_RfpModifiedDate.Designer.cs">
+      <DependentUpon>201711091358096_RfpModifiedDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711092027056_CompanyXContact.cs" />
+    <Compile Include="Migrations\201711092027056_CompanyXContact.Designer.cs">
+      <DependentUpon>201711092027056_CompanyXContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711101228246_ContactDocuments.cs" />
+    <Compile Include="Migrations\201711101228246_ContactDocuments.Designer.cs">
+      <DependentUpon>201711101228246_ContactDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711111244375_FixeEmployeeLastNameIndex.cs" />
+    <Compile Include="Migrations\201711111244375_FixeEmployeeLastNameIndex.Designer.cs">
+      <DependentUpon>201711111244375_FixeEmployeeLastNameIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711131137523_Employee_IdCity_nullable.cs" />
+    <Compile Include="Migrations\201711131137523_Employee_IdCity_nullable.Designer.cs">
+      <DependentUpon>201711131137523_Employee_IdCity_nullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711131235334_ReferredNotMadatoryOnRfp.cs" />
+    <Compile Include="Migrations\201711131235334_ReferredNotMadatoryOnRfp.Designer.cs">
+      <DependentUpon>201711131235334_ReferredNotMadatoryOnRfp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711131811046_Employee_WillCauseCascadeOnDelete_On_AgentCertificate_And_EmployeeDocument.cs" />
+    <Compile Include="Migrations\201711131811046_Employee_WillCauseCascadeOnDelete_On_AgentCertificate_And_EmployeeDocument.Designer.cs">
+      <DependentUpon>201711131811046_Employee_WillCauseCascadeOnDelete_On_AgentCertificate_And_EmployeeDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711141108503_CascadeDeleteOnContactRelations.cs" />
+    <Compile Include="Migrations\201711141108503_CascadeDeleteOnContactRelations.Designer.cs">
+      <DependentUpon>201711141108503_CascadeDeleteOnContactRelations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711171510340_Verbiage.cs" />
+    <Compile Include="Migrations\201711171510340_Verbiage.Designer.cs">
+      <DependentUpon>201711171510340_Verbiage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711172300335_JobWorkContent.cs" />
+    <Compile Include="Migrations\201711172300335_JobWorkContent.Designer.cs">
+      <DependentUpon>201711172300335_JobWorkContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711181833557_ForeignKeyIdRfp.cs" />
+    <Compile Include="Migrations\201711181833557_ForeignKeyIdRfp.Designer.cs">
+      <DependentUpon>201711181833557_ForeignKeyIdRfp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711182045177_EmailTransmissionTypes.cs" />
+    <Compile Include="Migrations\201711182045177_EmailTransmissionTypes.Designer.cs">
+      <DependentUpon>201711182045177_EmailTransmissionTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711240159005_ScopeReviewSection.cs" />
+    <Compile Include="Migrations\201711240159005_ScopeReviewSection.Designer.cs">
+      <DependentUpon>201711240159005_ScopeReviewSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711270138542_RfpAdressNonMandatoryFields.cs" />
+    <Compile Include="Migrations\201711270138542_RfpAdressNonMandatoryFields.Designer.cs">
+      <DependentUpon>201711270138542_RfpAdressNonMandatoryFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711281142489_ReferenceLinks.cs" />
+    <Compile Include="Migrations\201711281142489_ReferenceLinks.Designer.cs">
+      <DependentUpon>201711281142489_ReferenceLinks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711281226000_ReferenceDocumentsAndReferenceLinksFixes.cs" />
+    <Compile Include="Migrations\201711281226000_ReferenceDocumentsAndReferenceLinksFixes.Designer.cs">
+      <DependentUpon>201711281226000_ReferenceDocumentsAndReferenceLinksFixes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711301011487_Jobs.cs" />
+    <Compile Include="Migrations\201711301011487_Jobs.Designer.cs">
+      <DependentUpon>201711301011487_Jobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711301317543_Jobs2.cs" />
+    <Compile Include="Migrations\201711301317543_Jobs2.Designer.cs">
+      <DependentUpon>201711301317543_Jobs2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712011017141_lastDateModified.cs" />
+    <Compile Include="Migrations\201712011017141_lastDateModified.Designer.cs">
+      <DependentUpon>201712011017141_lastDateModified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021354230_RpfOnJob.cs" />
+    <Compile Include="Migrations\201712021354230_RpfOnJob.Designer.cs">
+      <DependentUpon>201712021354230_RpfOnJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021842260_DocumentContent.cs" />
+    <Compile Include="Migrations\201712021842260_DocumentContent.Designer.cs">
+      <DependentUpon>201712021842260_DocumentContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021902374_JobsMilestonesScopes.cs" />
+    <Compile Include="Migrations\201712021902374_JobsMilestonesScopes.Designer.cs">
+      <DependentUpon>201712021902374_JobsMilestonesScopes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712021955447_AdjustMilestoneValueDataType.cs" />
+    <Compile Include="Migrations\201712021955447_AdjustMilestoneValueDataType.Designer.cs">
+      <DependentUpon>201712021955447_AdjustMilestoneValueDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712060946511_ContactAllOptinal.cs" />
+    <Compile Include="Migrations\201712060946511_ContactAllOptinal.Designer.cs">
+      <DependentUpon>201712060946511_ContactAllOptinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712061039109_ChangeReferenceDocuments.cs" />
+    <Compile Include="Migrations\201712061039109_ChangeReferenceDocuments.Designer.cs">
+      <DependentUpon>201712061039109_ChangeReferenceDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712070104172_companyURL.cs" />
+    <Compile Include="Migrations\201712070104172_companyURL.Designer.cs">
+      <DependentUpon>201712070104172_companyURL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712072247339_ChangesOnCompanyContactsAddress.cs" />
+    <Compile Include="Migrations\201712072247339_ChangesOnCompanyContactsAddress.Designer.cs">
+      <DependentUpon>201712072247339_ChangesOnCompanyContactsAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712072300170_CompanyTypeArray.cs" />
+    <Compile Include="Migrations\201712072300170_CompanyTypeArray.Designer.cs">
+      <DependentUpon>201712072300170_CompanyTypeArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712081505249_CompanyTypeNested.cs" />
+    <Compile Include="Migrations\201712081505249_CompanyTypeNested.Designer.cs">
+      <DependentUpon>201712081505249_CompanyTypeNested.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712091631125_ContactTitleSize.cs" />
+    <Compile Include="Migrations\201712091631125_ContactTitleSize.Designer.cs">
+      <DependentUpon>201712091631125_ContactTitleSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712111315415_ChangeUniquenessContactEmail.cs" />
+    <Compile Include="Migrations\201712111315415_ChangeUniquenessContactEmail.Designer.cs">
+      <DependentUpon>201712111315415_ChangeUniquenessContactEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712111534274_NewRfpAddressFields.cs" />
+    <Compile Include="Migrations\201712111534274_NewRfpAddressFields.Designer.cs">
+      <DependentUpon>201712111534274_NewRfpAddressFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712121054590_RfpCompanyAndAddressOptional.cs" />
+    <Compile Include="Migrations\201712121054590_RfpCompanyAndAddressOptional.Designer.cs">
+      <DependentUpon>201712121054590_RfpCompanyAndAddressOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712121105029_ExportGrants.cs" />
+    <Compile Include="Migrations\201712121105029_ExportGrants.Designer.cs">
+      <DependentUpon>201712121105029_ExportGrants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712131131244_UnnitOnMilestone.cs" />
+    <Compile Include="Migrations\201712131131244_UnnitOnMilestone.Designer.cs">
+      <DependentUpon>201712131131244_UnnitOnMilestone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712131509322_JobMilestoneLastUpdate.cs" />
+    <Compile Include="Migrations\201712131509322_JobMilestoneLastUpdate.Designer.cs">
+      <DependentUpon>201712131509322_JobMilestoneLastUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712140320046_ChangesJobsScopeAndProjectDetails.cs" />
+    <Compile Include="Migrations\201712140320046_ChangesJobsScopeAndProjectDetails.Designer.cs">
+      <DependentUpon>201712140320046_ChangesJobsScopeAndProjectDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712181702447_filecontentAndMilestoneUnit.cs" />
+    <Compile Include="Migrations\201712181702447_filecontentAndMilestoneUnit.Designer.cs">
+      <DependentUpon>201712181702447_filecontentAndMilestoneUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270521260_MakeIdcontactNotNull.cs" />
+    <Compile Include="Migrations\201712270521260_MakeIdcontactNotNull.Designer.cs">
+      <DependentUpon>201712270521260_MakeIdcontactNotNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270755095_AddColumnForContactImagepath.cs" />
+    <Compile Include="Migrations\201712270755095_AddColumnForContactImagepath.Designer.cs">
+      <DependentUpon>201712270755095_AddColumnForContactImagepath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712270949487_AddColumnForEmployeeAndRFP.cs" />
+    <Compile Include="Migrations\201712270949487_AddColumnForEmployeeAndRFP.Designer.cs">
+      <DependentUpon>201712270949487_AddColumnForEmployeeAndRFP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712280819019_AddnewFieldinRFPforSaved.cs" />
+    <Compile Include="Migrations\201712280819019_AddnewFieldinRFPforSaved.Designer.cs">
+      <DependentUpon>201712280819019_AddnewFieldinRFPforSaved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712301208009_AddColumnforContactThumbImagePath.cs" />
+    <Compile Include="Migrations\201712301208009_AddColumnforContactThumbImagePath.Designer.cs">
+      <DependentUpon>201712301208009_AddColumnforContactThumbImagePath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801030654558_AddLoginpasswordInEmployeeTable.cs" />
+    <Compile Include="Migrations\201801030654558_AddLoginpasswordInEmployeeTable.Designer.cs">
+      <DependentUpon>201801030654558_AddLoginpasswordInEmployeeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801030804503_AddDocumentPathInEmployeeDocument.cs" />
+    <Compile Include="Migrations\201801030804503_AddDocumentPathInEmployeeDocument.Designer.cs">
+      <DependentUpon>201801030804503_AddDocumentPathInEmployeeDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801050532335_CreateJobApplicationType.cs" />
+    <Compile Include="Migrations\201801050532335_CreateJobApplicationType.Designer.cs">
+      <DependentUpon>201801050532335_CreateJobApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801050944026_ChangeForeignKeyinJobApplication.cs" />
+    <Compile Include="Migrations\201801050944026_ChangeForeignKeyinJobApplication.Designer.cs">
+      <DependentUpon>201801050944026_ChangeForeignKeyinJobApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801080617531_SolveTheJobApplicationTypeError.cs" />
+    <Compile Include="Migrations\201801080617531_SolveTheJobApplicationTypeError.Designer.cs">
+      <DependentUpon>201801080617531_SolveTheJobApplicationTypeError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801080920589_AddApplicationStatusTable.cs" />
+    <Compile Include="Migrations\201801080920589_AddApplicationStatusTable.Designer.cs">
+      <DependentUpon>201801080920589_AddApplicationStatusTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801081533038_JobHasJobs.cs" />
+    <Compile Include="Migrations\201801081533038_JobHasJobs.Designer.cs">
+      <DependentUpon>201801081533038_JobHasJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801090631593_RenameJobApplicationForColumn.cs" />
+    <Compile Include="Migrations\201801090631593_RenameJobApplicationForColumn.Designer.cs">
+      <DependentUpon>201801090631593_RenameJobApplicationForColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801090930323_JobHistory.cs" />
+    <Compile Include="Migrations\201801090930323_JobHistory.Designer.cs">
+      <DependentUpon>201801090930323_JobHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801110641580_AddHoliday-EmbargoInJob.cs" />
+    <Compile Include="Migrations\201801110641580_AddHoliday-EmbargoInJob.Designer.cs">
+      <DependentUpon>201801110641580_AddHoliday-EmbargoInJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801111147578_MakeApplicationStatusoptional.cs" />
+    <Compile Include="Migrations\201801111147578_MakeApplicationStatusoptional.Designer.cs">
+      <DependentUpon>201801111147578_MakeApplicationStatusoptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801121242028_AddJobIdColumninJobHistory.cs" />
+    <Compile Include="Migrations\201801121242028_AddJobIdColumninJobHistory.Designer.cs">
+      <DependentUpon>201801121242028_AddJobIdColumninJobHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801121404239_EditColumnsForJobWorkPermits.cs" />
+    <Compile Include="Migrations\201801121404239_EditColumnsForJobWorkPermits.Designer.cs">
+      <DependentUpon>201801121404239_EditColumnsForJobWorkPermits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801130831588_MakeContactNotMandatory.cs" />
+    <Compile Include="Migrations\201801130831588_MakeContactNotMandatory.Designer.cs">
+      <DependentUpon>201801130831588_MakeContactNotMandatory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801142311170_JobContactChanges.cs" />
+    <Compile Include="Migrations\201801142311170_JobContactChanges.Designer.cs">
+      <DependentUpon>201801142311170_JobContactChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801150211067_JobTimeNotes.cs" />
+    <Compile Include="Migrations\201801150211067_JobTimeNotes.Designer.cs">
+      <DependentUpon>201801150211067_JobTimeNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801160634382_RenameTheColumnFloorworking.cs" />
+    <Compile Include="Migrations\201801160634382_RenameTheColumnFloorworking.Designer.cs">
+      <DependentUpon>201801160634382_RenameTheColumnFloorworking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801161236482_MakeEmployeeIdNotrequired.cs" />
+    <Compile Include="Migrations\201801161236482_MakeEmployeeIdNotrequired.Designer.cs">
+      <DependentUpon>201801161236482_MakeEmployeeIdNotrequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801170600167_MakeUnitandValueNullable.cs" />
+    <Compile Include="Migrations\201801170600167_MakeUnitandValueNullable.Designer.cs">
+      <DependentUpon>201801170600167_MakeUnitandValueNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801171449506_ChangeTheReferenceDocumentNameLength.cs" />
+    <Compile Include="Migrations\201801171449506_ChangeTheReferenceDocumentNameLength.Designer.cs">
+      <DependentUpon>201801171449506_ChangeTheReferenceDocumentNameLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801180824340_ChangeLastModifiedByColumn.cs" />
+    <Compile Include="Migrations\201801180824340_ChangeLastModifiedByColumn.Designer.cs">
+      <DependentUpon>201801180824340_ChangeLastModifiedByColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801190820516_ChangesJobTimeNoteTable.cs" />
+    <Compile Include="Migrations\201801190820516_ChangesJobTimeNoteTable.Designer.cs">
+      <DependentUpon>201801190820516_ChangesJobTimeNoteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801220739595_ChangesInContatctType.cs" />
+    <Compile Include="Migrations\201801220739595_ChangesInContatctType.Designer.cs">
+      <DependentUpon>201801220739595_ChangesInContatctType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801220914329_AddressTypeDisplayOrder.cs" />
+    <Compile Include="Migrations\201801220914329_AddressTypeDisplayOrder.Designer.cs">
+      <DependentUpon>201801220914329_AddressTypeDisplayOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801221249492_ApplyforeignKeyToIdBorough.cs" />
+    <Compile Include="Migrations\201801221249492_ApplyforeignKeyToIdBorough.Designer.cs">
+      <DependentUpon>201801221249492_ApplyforeignKeyToIdBorough.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801230527039_ChangeJobContactAddress.cs" />
+    <Compile Include="Migrations\201801230527039_ChangeJobContactAddress.Designer.cs">
+      <DependentUpon>201801230527039_ChangeJobContactAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801230539396_MakeIdCompanyNullable.cs" />
+    <Compile Include="Migrations\201801230539396_MakeIdCompanyNullable.Designer.cs">
+      <DependentUpon>201801230539396_MakeIdCompanyNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801231125337_CreateTableforRFPEmail.cs" />
+    <Compile Include="Migrations\201801231125337_CreateTableforRFPEmail.Designer.cs">
+      <DependentUpon>201801231125337_CreateTableforRFPEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801231247162_ChangeTheEmailHistoryTable.cs" />
+    <Compile Include="Migrations\201801231247162_ChangeTheEmailHistoryTable.Designer.cs">
+      <DependentUpon>201801231247162_ChangeTheEmailHistoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801231540092_TaskNotes.cs" />
+    <Compile Include="Migrations\201801231540092_TaskNotes.Designer.cs">
+      <DependentUpon>201801231540092_TaskNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801240600013_ChangeInJobTask.cs" />
+    <Compile Include="Migrations\201801240600013_ChangeInJobTask.Designer.cs">
+      <DependentUpon>201801240600013_ChangeInJobTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801241422161_RemoveTheContentColumn.cs" />
+    <Compile Include="Migrations\201801241422161_RemoveTheContentColumn.Designer.cs">
+      <DependentUpon>201801241422161_RemoveTheContentColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801250818204_AddCloseDate.cs" />
+    <Compile Include="Migrations\201801250818204_AddCloseDate.Designer.cs">
+      <DependentUpon>201801250818204_AddCloseDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801270543434_CreateTableTaskReminders.cs" />
+    <Compile Include="Migrations\201801270543434_CreateTableTaskReminders.Designer.cs">
+      <DependentUpon>201801270543434_CreateTableTaskReminders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801290520052_AddReminderDate.cs" />
+    <Compile Include="Migrations\201801290520052_AddReminderDate.Designer.cs">
+      <DependentUpon>201801290520052_AddReminderDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802010138568_BisCode.cs" />
+    <Compile Include="Migrations\201802010138568_BisCode.Designer.cs">
+      <DependentUpon>201802010138568_BisCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802010520567_MergetheChanges.cs" />
+    <Compile Include="Migrations\201802010520567_MergetheChanges.Designer.cs">
+      <DependentUpon>201802010520567_MergetheChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802011320302_CreateEmailLogTable.cs" />
+    <Compile Include="Migrations\201802011320302_CreateEmailLogTable.Designer.cs">
+      <DependentUpon>201802011320302_CreateEmailLogTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802020818065_ChangethelengthofTheFields.cs" />
+    <Compile Include="Migrations\201802020818065_ChangethelengthofTheFields.Designer.cs">
+      <DependentUpon>201802020818065_ChangethelengthofTheFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802050720168_CreateMasterforJobStatus.cs" />
+    <Compile Include="Migrations\201802050720168_CreateMasterforJobStatus.Designer.cs">
+      <DependentUpon>201802050720168_CreateMasterforJobStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802050844095_RewartTheJobStatusChanges.cs" />
+    <Compile Include="Migrations\201802050844095_RewartTheJobStatusChanges.Designer.cs">
+      <DependentUpon>201802050844095_RewartTheJobStatusChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802060530457_AddNewColumnsInRFP.cs" />
+    <Compile Include="Migrations\201802060530457_AddNewColumnsInRFP.Designer.cs">
+      <DependentUpon>201802060530457_AddNewColumnsInRFP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802060931142_AddNewColumnsInRFPStatus.cs" />
+    <Compile Include="Migrations\201802060931142_AddNewColumnsInRFPStatus.Designer.cs">
+      <DependentUpon>201802060931142_AddNewColumnsInRFPStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802070545478_ChangelengthOfZipcode.cs" />
+    <Compile Include="Migrations\201802070545478_ChangelengthOfZipcode.Designer.cs">
+      <DependentUpon>201802070545478_ChangelengthOfZipcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802080927235_AddLastModifiedDateAndCreatedDate.cs" />
+    <Compile Include="Migrations\201802080927235_AddLastModifiedDateAndCreatedDate.Designer.cs">
+      <DependentUpon>201802080927235_AddLastModifiedDateAndCreatedDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802080937454_AddLastModifiedDateInEmployee.cs" />
+    <Compile Include="Migrations\201802080937454_AddLastModifiedDateInEmployee.Designer.cs">
+      <DependentUpon>201802080937454_AddLastModifiedDateInEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802081029477_ChangeDateNullable.cs" />
+    <Compile Include="Migrations\201802081029477_ChangeDateNullable.Designer.cs">
+      <DependentUpon>201802081029477_ChangeDateNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802121207099_AddRemoveColumnsFromJobTimeNotes.cs" />
+    <Compile Include="Migrations\201802121207099_AddRemoveColumnsFromJobTimeNotes.Designer.cs">
+      <DependentUpon>201802121207099_AddRemoveColumnsFromJobTimeNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802121303565_AddRemoveColumnsFromJobTimeNotesCategories.cs" />
+    <Compile Include="Migrations\201802121303565_AddRemoveColumnsFromJobTimeNotesCategories.Designer.cs">
+      <DependentUpon>201802121303565_AddRemoveColumnsFromJobTimeNotesCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140858055_AddNewFieldsInEmailType.cs" />
+    <Compile Include="Migrations\201802140858055_AddNewFieldsInEmailType.Designer.cs">
+      <DependentUpon>201802140858055_AddNewFieldsInEmailType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802141055087_AddNewFieldsInJobContactType.cs" />
+    <Compile Include="Migrations\201802141055087_AddNewFieldsInJobContactType.Designer.cs">
+      <DependentUpon>201802141055087_AddNewFieldsInJobContactType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802141300080_AddNewTablesForSendEmail.cs" />
+    <Compile Include="Migrations\201802141300080_AddNewTablesForSendEmail.Designer.cs">
+      <DependentUpon>201802141300080_AddNewTablesForSendEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802141334437_AddNewTablesJobTimeNotes.cs" />
+    <Compile Include="Migrations\201802141334437_AddNewTablesJobTimeNotes.Designer.cs">
+      <DependentUpon>201802141334437_AddNewTablesJobTimeNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802151251420_AddColumnsInMasterTables.cs" />
+    <Compile Include="Migrations\201802151251420_AddColumnsInMasterTables.Designer.cs">
+      <DependentUpon>201802151251420_AddColumnsInMasterTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802161033390_CreateTableTrasmissionTypeDefaultCC.cs" />
+    <Compile Include="Migrations\201802161033390_CreateTableTrasmissionTypeDefaultCC.Designer.cs">
+      <DependentUpon>201802161033390_CreateTableTrasmissionTypeDefaultCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802190606313_AddNewFieldsInEmployee.cs" />
+    <Compile Include="Migrations\201802190606313_AddNewFieldsInEmployee.Designer.cs">
+      <DependentUpon>201802190606313_AddNewFieldsInEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802191145521_AddJobTrasmittalTable.cs" />
+    <Compile Include="Migrations\201802191145521_AddJobTrasmittalTable.Designer.cs">
+      <DependentUpon>201802191145521_AddJobTrasmittalTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802200557310_AddCommonColumnsInMasterTables.cs" />
+    <Compile Include="Migrations\201802200557310_AddCommonColumnsInMasterTables.Designer.cs">
+      <DependentUpon>201802200557310_AddCommonColumnsInMasterTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802211118291_AddProjectTeamColumns.cs" />
+    <Compile Include="Migrations\201802211118291_AddProjectTeamColumns.Designer.cs">
+      <DependentUpon>201802211118291_AddProjectTeamColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802220514306_MakeJobTimeNoteCategoryNameUnique.cs" />
+    <Compile Include="Migrations\201802220514306_MakeJobTimeNoteCategoryNameUnique.Designer.cs">
+      <DependentUpon>201802220514306_MakeJobTimeNoteCategoryNameUnique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802220650137_ProjectTeamMemberOptional.cs" />
+    <Compile Include="Migrations\201802220650137_ProjectTeamMemberOptional.Designer.cs">
+      <DependentUpon>201802220650137_ProjectTeamMemberOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802220901211_ProjectManagerOptional.cs" />
+    <Compile Include="Migrations\201802220901211_ProjectManagerOptional.Designer.cs">
+      <DependentUpon>201802220901211_ProjectManagerOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802230836418_Make AddressTypeNullable.cs" />
+    <Compile Include="Migrations\201802230836418_Make AddressTypeNullable.Designer.cs">
+      <DependentUpon>201802230836418_Make AddressTypeNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802231347037_AddNewColumnInJobtransmittalAttachement.cs" />
+    <Compile Include="Migrations\201802231347037_AddNewColumnInJobtransmittalAttachement.Designer.cs">
+      <DependentUpon>201802231347037_AddNewColumnInJobtransmittalAttachement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802240837006_ChangeFieldsNullable.cs" />
+    <Compile Include="Migrations\201802240837006_ChangeFieldsNullable.Designer.cs">
+      <DependentUpon>201802240837006_ChangeFieldsNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802270737063_AddIsArchiveColumnInEmployee.cs" />
+    <Compile Include="Migrations\201802270737063_AddIsArchiveColumnInEmployee.Designer.cs">
+      <DependentUpon>201802270737063_AddIsArchiveColumnInEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080613116_CreateTableRFPJobTypes.cs" />
+    <Compile Include="Migrations\201803080613116_CreateTableRFPJobTypes.Designer.cs">
+      <DependentUpon>201803080613116_CreateTableRFPJobTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080643045_MakeCompanyOptionalInJob.cs" />
+    <Compile Include="Migrations\201803080643045_MakeCompanyOptionalInJob.Designer.cs">
+      <DependentUpon>201803080643045_MakeCompanyOptionalInJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080818530_MakeCreatedByOptional.cs" />
+    <Compile Include="Migrations\201803080818530_MakeCreatedByOptional.Designer.cs">
+      <DependentUpon>201803080818530_MakeCreatedByOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803090527595_AddIsDefaultColumnInVerbiages.cs" />
+    <Compile Include="Migrations\201803090527595_AddIsDefaultColumnInVerbiages.Designer.cs">
+      <DependentUpon>201803090527595_AddIsDefaultColumnInVerbiages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803090946189_ChangeInRFPDataStracture.cs" />
+    <Compile Include="Migrations\201803090946189_ChangeInRFPDataStracture.Designer.cs">
+      <DependentUpon>201803090946189_ChangeInRFPDataStracture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803100635425_AddNewFieldInVerbiagies.cs" />
+    <Compile Include="Migrations\201803100635425_AddNewFieldInVerbiagies.Designer.cs">
+      <DependentUpon>201803100635425_AddNewFieldInVerbiagies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121306139_AddControlFieldsInRfpWorkType.cs" />
+    <Compile Include="Migrations\201803121306139_AddControlFieldsInRfpWorkType.Designer.cs">
+      <DependentUpon>201803121306139_AddControlFieldsInRfpWorkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803130922087_MakeWorkTypeMasterNotUnique.cs" />
+    <Compile Include="Migrations\201803130922087_MakeWorkTypeMasterNotUnique.Designer.cs">
+      <DependentUpon>201803130922087_MakeWorkTypeMasterNotUnique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803130958387_AddNewFieldsForRFPMasters.cs" />
+    <Compile Include="Migrations\201803130958387_AddNewFieldsForRFPMasters.Designer.cs">
+      <DependentUpon>201803130958387_AddNewFieldsForRFPMasters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803140946004_AddNewTableUserNotifications.cs" />
+    <Compile Include="Migrations\201803140946004_AddNewTableUserNotifications.Designer.cs">
+      <DependentUpon>201803140946004_AddNewTableUserNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803150804529_AddNewColumnsInUserNotification.cs" />
+    <Compile Include="Migrations\201803150804529_AddNewColumnsInUserNotification.Designer.cs">
+      <DependentUpon>201803150804529_AddNewColumnsInUserNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803150905169_AddNewTableRfpProgressNote.cs" />
+    <Compile Include="Migrations\201803150905169_AddNewTableRfpProgressNote.Designer.cs">
+      <DependentUpon>201803150905169_AddNewTableRfpProgressNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803150920068_AddNewTableRfpReviewer.cs" />
+    <Compile Include="Migrations\201803150920068_AddNewTableRfpReviewer.Designer.cs">
+      <DependentUpon>201803150920068_AddNewTableRfpReviewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803160650292_AddTaskTypeIsDisplay.cs" />
+    <Compile Include="Migrations\201803160650292_AddTaskTypeIsDisplay.Designer.cs">
+      <DependentUpon>201803160650292_AddTaskTypeIsDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803160808320_AddNewFieldsInRfpJobType.cs" />
+    <Compile Include="Migrations\201803160808320_AddNewFieldsInRfpJobType.Designer.cs">
+      <DependentUpon>201803160808320_AddNewFieldsInRfpJobType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803190648558_ChangesInRFPJobTypeMaster.cs" />
+    <Compile Include="Migrations\201803190648558_ChangesInRFPJobTypeMaster.Designer.cs">
+      <DependentUpon>201803190648558_ChangesInRFPJobTypeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803200555564_ChangeInPriceRangeTableForWorkType.cs" />
+    <Compile Include="Migrations\201803200555564_ChangeInPriceRangeTableForWorkType.Designer.cs">
+      <DependentUpon>201803200555564_ChangeInPriceRangeTableForWorkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803201313243_ChangeInFeeScheduleDataStrcture.cs" />
+    <Compile Include="Migrations\201803201313243_ChangeInFeeScheduleDataStrcture.Designer.cs">
+      <DependentUpon>201803201313243_ChangeInFeeScheduleDataStrcture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803210708441_AddRfpCumulativeCost.cs" />
+    <Compile Include="Migrations\201803210708441_AddRfpCumulativeCost.Designer.cs">
+      <DependentUpon>201803210708441_AddRfpCumulativeCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803210903310_UpdateRfpJobTypeCumulativeCost.cs" />
+    <Compile Include="Migrations\201803210903310_UpdateRfpJobTypeCumulativeCost.Designer.cs">
+      <DependentUpon>201803210903310_UpdateRfpJobTypeCumulativeCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803211018386_UpdateRfpJobTypeCumulativeCostToICollection.cs" />
+    <Compile Include="Migrations\201803211018386_UpdateRfpJobTypeCumulativeCostToICollection.Designer.cs">
+      <DependentUpon>201803211018386_UpdateRfpJobTypeCumulativeCostToICollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803211028468_ChangeIdentityRfpScopeReview.cs" />
+    <Compile Include="Migrations\201803211028468_ChangeIdentityRfpScopeReview.Designer.cs">
+      <DependentUpon>201803211028468_ChangeIdentityRfpScopeReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803211319107_MakeIdRFPSubJobTypeNullable.cs" />
+    <Compile Include="Migrations\201803211319107_MakeIdRFPSubJobTypeNullable.Designer.cs">
+      <DependentUpon>201803211319107_MakeIdRFPSubJobTypeNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803220518360_AddRfpForeignKeyToFeeSchedule.cs" />
+    <Compile Include="Migrations\201803220518360_AddRfpForeignKeyToFeeSchedule.Designer.cs">
+      <DependentUpon>201803220518360_AddRfpForeignKeyToFeeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803230837187_IsCurrentStatusOfFiling.cs" />
+    <Compile Include="Migrations\201803230837187_IsCurrentStatusOfFiling.Designer.cs">
+      <DependentUpon>201803230837187_IsCurrentStatusOfFiling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803240618223_DisprovedJobNumber.cs" />
+    <Compile Include="Migrations\201803240618223_DisprovedJobNumber.Designer.cs">
+      <DependentUpon>201803240618223_DisprovedJobNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803240823169_New_Changes.cs" />
+    <Compile Include="Migrations\201803240823169_New_Changes.Designer.cs">
+      <DependentUpon>201803240823169_New_Changes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803260645001_AddTableMilestoneServices.cs" />
+    <Compile Include="Migrations\201803260645001_AddTableMilestoneServices.Designer.cs">
+      <DependentUpon>201803260645001_AddTableMilestoneServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803281116473_AddDisplayOrderInDisplayOrder.cs" />
+    <Compile Include="Migrations\201803281116473_AddDisplayOrderInDisplayOrder.Designer.cs">
+      <DependentUpon>201803281116473_AddDisplayOrderInDisplayOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803290533414_AddDisplayOrderInRfpjobType.cs" />
+    <Compile Include="Migrations\201803290533414_AddDisplayOrderInRfpjobType.Designer.cs">
+      <DependentUpon>201803290533414_AddDisplayOrderInRfpjobType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803290804300_AddTaskNumberInTask.cs" />
+    <Compile Include="Migrations\201803290804300_AddTaskNumberInTask.Designer.cs">
+      <DependentUpon>201803290804300_AddTaskNumberInTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804040931215_CreateTableSystemSetting.cs" />
+    <Compile Include="Migrations\201804040931215_CreateTableSystemSetting.Designer.cs">
+      <DependentUpon>201804040931215_CreateTableSystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804041024379_CreateDataStructureEmployeePermission.cs" />
+    <Compile Include="Migrations\201804041024379_CreateDataStructureEmployeePermission.Designer.cs">
+      <DependentUpon>201804041024379_CreateDataStructureEmployeePermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804041142508_ChangeinGroupPermission.cs" />
+    <Compile Include="Migrations\201804041142508_ChangeinGroupPermission.Designer.cs">
+      <DependentUpon>201804041142508_ChangeinGroupPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804060644283_MakeFeeScheduleQuantityDecimal.cs" />
+    <Compile Include="Migrations\201804060644283_MakeFeeScheduleQuantityDecimal.Designer.cs">
+      <DependentUpon>201804060644283_MakeFeeScheduleQuantityDecimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804090948062_JobMilestoneChanges.cs" />
+    <Compile Include="Migrations\201804090948062_JobMilestoneChanges.Designer.cs">
+      <DependentUpon>201804090948062_JobMilestoneChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804091253160_JobFeeScheduleChamges.cs" />
+    <Compile Include="Migrations\201804091253160_JobFeeScheduleChamges.Designer.cs">
+      <DependentUpon>201804091253160_JobFeeScheduleChamges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804100639194_CreateTableJobMilestoneServices.cs" />
+    <Compile Include="Migrations\201804100639194_CreateTableJobMilestoneServices.Designer.cs">
+      <DependentUpon>201804100639194_CreateTableJobMilestoneServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804130641157_JobMilestoneNewColumns.cs" />
+    <Compile Include="Migrations\201804130641157_JobMilestoneNewColumns.Designer.cs">
+      <DependentUpon>201804130641157_JobMilestoneNewColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804160606541_AddNewColumnsInTask.cs" />
+    <Compile Include="Migrations\201804160606541_AddNewColumnsInTask.Designer.cs">
+      <DependentUpon>201804160606541_AddNewColumnsInTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804161025091_ChangeAddQuanityInTask.cs" />
+    <Compile Include="Migrations\201804161025091_ChangeAddQuanityInTask.Designer.cs">
+      <DependentUpon>201804161025091_ChangeAddQuanityInTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804170402162_GroupInAddPermissionsField.cs" />
+    <Compile Include="Migrations\201804170402162_GroupInAddPermissionsField.Designer.cs">
+      <DependentUpon>201804170402162_GroupInAddPermissionsField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804170654147_ChangeTheRightsforEmployee.cs" />
+    <Compile Include="Migrations\201804170654147_ChangeTheRightsforEmployee.Designer.cs">
+      <DependentUpon>201804170654147_ChangeTheRightsforEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804171020193_PermissionModelChange.cs" />
+    <Compile Include="Migrations\201804171020193_PermissionModelChange.Designer.cs">
+      <DependentUpon>201804171020193_PermissionModelChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804171359420_DocumentsFielddocumentfieldsmapping.cs" />
+    <Compile Include="Migrations\201804171359420_DocumentsFielddocumentfieldsmapping.Designer.cs">
+      <DependentUpon>201804171359420_DocumentsFielddocumentfieldsmapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804180836051_AddColumninRFPFeeSchedule.cs" />
+    <Compile Include="Migrations\201804180836051_AddColumninRFPFeeSchedule.Designer.cs">
+      <DependentUpon>201804180836051_AddColumninRFPFeeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804181013465_JobDocumentModelchangeJobdocumentFieldModelAddJobDocumentAttachmentModelAdd.cs" />
+    <Compile Include="Migrations\201804181013465_JobDocumentModelchangeJobdocumentFieldModelAddJobDocumentAttachmentModelAdd.Designer.cs">
+      <DependentUpon>201804181013465_JobDocumentModelchangeJobdocumentFieldModelAddJobDocumentAttachmentModelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804191143396_CreateTableTaskHistory.cs" />
+    <Compile Include="Migrations\201804191143396_CreateTableTaskHistory.Designer.cs">
+      <DependentUpon>201804191143396_CreateTableTaskHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200554461_DocumentFieldsPdffieldscolumnadded.cs" />
+    <Compile Include="Migrations\201804200554461_DocumentFieldsPdffieldscolumnadded.Designer.cs">
+      <DependentUpon>201804200554461_DocumentFieldsPdffieldscolumnadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200642378_ChangesMerge.cs" />
+    <Compile Include="Migrations\201804200642378_ChangesMerge.Designer.cs">
+      <DependentUpon>201804200642378_ChangesMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804201007181_IdJobFeeScheduleMakeForeignkey.cs" />
+    <Compile Include="Migrations\201804201007181_IdJobFeeScheduleMakeForeignkey.Designer.cs">
+      <DependentUpon>201804201007181_IdJobFeeScheduleMakeForeignkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804230638287_AddIsRemovedFlagInJobFeeSchedule.cs" />
+    <Compile Include="Migrations\201804230638287_AddIsRemovedFlagInJobFeeSchedule.Designer.cs">
+      <DependentUpon>201804230638287_AddIsRemovedFlagInJobFeeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231222094_AddNewFieldInPermission.cs" />
+    <Compile Include="Migrations\201804231222094_AddNewFieldInPermission.Designer.cs">
+      <DependentUpon>201804231222094_AddNewFieldInPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231153207_AddFieldStaticDescriptioninDocumentFieldandAddFieldIsFrontEndDisplayinField.cs" />
+    <Compile Include="Migrations\201804231153207_AddFieldStaticDescriptioninDocumentFieldandAddFieldIsFrontEndDisplayinField.Designer.cs">
+      <DependentUpon>201804231153207_AddFieldStaticDescriptioninDocumentFieldandAddFieldIsFrontEndDisplayinField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804231248250_KrunalMergeChanges.cs" />
+    <Compile Include="Migrations\201804231248250_KrunalMergeChanges.Designer.cs">
+      <DependentUpon>201804231248250_KrunalMergeChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240622316_ChangeinTaskWorkpermit.cs" />
+    <Compile Include="Migrations\201804240622316_ChangeinTaskWorkpermit.Designer.cs">
+      <DependentUpon>201804240622316_ChangeinTaskWorkpermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804240859442_PermissionClass.cs" />
+    <Compile Include="Migrations\201804240859442_PermissionClass.Designer.cs">
+      <DependentUpon>201804240859442_PermissionClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804241322489_ContactTitleChanges.cs" />
+    <Compile Include="Migrations\201804241322489_ContactTitleChanges.Designer.cs">
+      <DependentUpon>201804241322489_ContactTitleChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804241345004_AddIsPlaceHolderfieldintblDocumentFields.cs" />
+    <Compile Include="Migrations\201804241345004_AddIsPlaceHolderfieldintblDocumentFields.Designer.cs">
+      <DependentUpon>201804241345004_AddIsPlaceHolderfieldintblDocumentFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804250600487_AddnewFieldInTaskTaskDuration.cs" />
+    <Compile Include="Migrations\201804250600487_AddnewFieldInTaskTaskDuration.Designer.cs">
+      <DependentUpon>201804250600487_AddnewFieldInTaskTaskDuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804251118141_CreateTableOpenMapAddress.cs" />
+    <Compile Include="Migrations\201804251118141_CreateTableOpenMapAddress.Designer.cs">
+      <DependentUpon>201804251118141_CreateTableOpenMapAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804251225032_AddDisplayOrderColumnInPermission.cs" />
+    <Compile Include="Migrations\201804251225032_AddDisplayOrderColumnInPermission.Designer.cs">
+      <DependentUpon>201804251225032_AddDisplayOrderColumnInPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804260724457_ChangeColumnsInOpenMapDataTable.cs" />
+    <Compile Include="Migrations\201804260724457_ChangeColumnsInOpenMapDataTable.Designer.cs">
+      <DependentUpon>201804260724457_ChangeColumnsInOpenMapDataTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804271134429_JobDocumentTypeModelAdded.cs" />
+    <Compile Include="Migrations\201804271134429_JobDocumentTypeModelAdded.Designer.cs">
+      <DependentUpon>201804271134429_JobDocumentTypeModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011107576_EmployeeLAstModifiedBy.cs" />
+    <Compile Include="Migrations\201805011107576_EmployeeLAstModifiedBy.Designer.cs">
+      <DependentUpon>201805011107576_EmployeeLAstModifiedBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011127539_GiveForeignKeyEmployee.cs" />
+    <Compile Include="Migrations\201805011127539_GiveForeignKeyEmployee.Designer.cs">
+      <DependentUpon>201805011127539_GiveForeignKeyEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805070522422_ChangeInVerbiageMaster.cs" />
+    <Compile Include="Migrations\201805070522422_ChangeInVerbiageMaster.Designer.cs">
+      <DependentUpon>201805070522422_ChangeInVerbiageMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805071242516_AddNewTableRfpAttachedDocument.cs" />
+    <Compile Include="Migrations\201805071242516_AddNewTableRfpAttachedDocument.Designer.cs">
+      <DependentUpon>201805071242516_AddNewTableRfpAttachedDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080558281_ChangeInRFPDocuements.cs" />
+    <Compile Include="Migrations\201805080558281_ChangeInRFPDocuements.Designer.cs">
+      <DependentUpon>201805080558281_ChangeInRFPDocuements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805080955566_CreateTableForJobViolation.cs" />
+    <Compile Include="Migrations\201805080955566_CreateTableForJobViolation.Designer.cs">
+      <DependentUpon>201805080955566_CreateTableForJobViolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090524022_JobDocumentAddedFieldformodifiedempdetails.cs" />
+    <Compile Include="Migrations\201805090524022_JobDocumentAddedFieldformodifiedempdetails.Designer.cs">
+      <DependentUpon>201805090524022_JobDocumentAddedFieldformodifiedempdetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090734463_ChangeInTimeNotes.cs" />
+    <Compile Include="Migrations\201805090734463_ChangeInTimeNotes.Designer.cs">
+      <DependentUpon>201805090734463_ChangeInTimeNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805090822123_JobDocumentfieldchange.cs" />
+    <Compile Include="Migrations\201805090822123_JobDocumentfieldchange.Designer.cs">
+      <DependentUpon>201805090822123_JobDocumentfieldchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091015446_AddCOCFields.cs" />
+    <Compile Include="Migrations\201805091015446_AddCOCFields.Designer.cs">
+      <DependentUpon>201805091015446_AddCOCFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091205035_QBEmployeeName.cs" />
+    <Compile Include="Migrations\201805091205035_QBEmployeeName.Designer.cs">
+      <DependentUpon>201805091205035_QBEmployeeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805110800273_CreateTimenoteHistoryTable.cs" />
+    <Compile Include="Migrations\201805110800273_CreateTimenoteHistoryTable.Designer.cs">
+      <DependentUpon>201805110800273_CreateTimenoteHistoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805111040500_CreatePaneltyTable.cs" />
+    <Compile Include="Migrations\201805111040500_CreatePaneltyTable.Designer.cs">
+      <DependentUpon>201805111040500_CreatePaneltyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805140555450_CreateJobViolationDocumentTable.cs" />
+    <Compile Include="Migrations\201805140555450_CreateJobViolationDocumentTable.Designer.cs">
+      <DependentUpon>201805140555450_CreateJobViolationDocumentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805140752209_ChangeApplicationAddNewColumn.cs" />
+    <Compile Include="Migrations\201805140752209_ChangeApplicationAddNewColumn.Designer.cs">
+      <DependentUpon>201805140752209_ChangeApplicationAddNewColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805151202421_CreateTableForJobTransmittal.cs" />
+    <Compile Include="Migrations\201805151202421_CreateTableForJobTransmittal.Designer.cs">
+      <DependentUpon>201805151202421_CreateTableForJobTransmittal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805161005527_AddFieldsInWorkPermit.cs" />
+    <Compile Include="Migrations\201805161005527_AddFieldsInWorkPermit.Designer.cs">
+      <DependentUpon>201805161005527_AddFieldsInWorkPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805161113065_ChangeInPaneltyCodeTable.cs" />
+    <Compile Include="Migrations\201805161113065_ChangeInPaneltyCodeTable.Designer.cs">
+      <DependentUpon>201805161113065_ChangeInPaneltyCodeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805210651148_AllergyInEmployee.cs" />
+    <Compile Include="Migrations\201805210651148_AllergyInEmployee.Designer.cs">
+      <DependentUpon>201805210651148_AllergyInEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805220754582_NewFieldsForWorkPermit.cs" />
+    <Compile Include="Migrations\201805220754582_NewFieldsForWorkPermit.Designer.cs">
+      <DependentUpon>201805220754582_NewFieldsForWorkPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805230907195_AddNewFieldsInJobForDOT.cs" />
+    <Compile Include="Migrations\201805230907195_AddNewFieldsInJobForDOT.Designer.cs">
+      <DependentUpon>201805230907195_AddNewFieldsInJobForDOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805231222433_ChnageInWorkPErmitForDOT.cs" />
+    <Compile Include="Migrations\201805231222433_ChnageInWorkPErmitForDOT.Designer.cs">
+      <DependentUpon>201805231222433_ChnageInWorkPErmitForDOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805250812517_DefaultValueInDocumentField.cs" />
+    <Compile Include="Migrations\201805250812517_DefaultValueInDocumentField.Designer.cs">
+      <DependentUpon>201805250812517_DefaultValueInDocumentField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805251059284_DisplayFieldNameInDocumentField.cs" />
+    <Compile Include="Migrations\201805251059284_DisplayFieldNameInDocumentField.Designer.cs">
+      <DependentUpon>201805251059284_DisplayFieldNameInDocumentField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805251218556_AddDisplayOrderInDocument.cs" />
+    <Compile Include="Migrations\201805251218556_AddDisplayOrderInDocument.Designer.cs">
+      <DependentUpon>201805251218556_AddDisplayOrderInDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805251303576_AddDocumentIdInJobDocumentType.cs" />
+    <Compile Include="Migrations\201805251303576_AddDocumentIdInJobDocumentType.Designer.cs">
+      <DependentUpon>201805251303576_AddDocumentIdInJobDocumentType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805280522112_IsDevelopementCompleted.cs" />
+    <Compile Include="Migrations\201805280522112_IsDevelopementCompleted.Designer.cs">
+      <DependentUpon>201805280522112_IsDevelopementCompleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805280544458_Added Job document field actual value.cs" />
+    <Compile Include="Migrations\201805280544458_Added Job document field actual value.Designer.cs">
+      <DependentUpon>201805280544458_Added Job document field actual value.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805280736138_ParentJobJobDocument.cs" />
+    <Compile Include="Migrations\201805280736138_ParentJobJobDocument.Designer.cs">
+      <DependentUpon>201805280736138_ParentJobJobDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805291229548_PaneltyCodeSection.cs" />
+    <Compile Include="Migrations\201805291229548_PaneltyCodeSection.Designer.cs">
+      <DependentUpon>201805291229548_PaneltyCodeSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806040641083_NoteTypeAddTwoFieldsForHoursAndMinutes.cs" />
+    <Compile Include="Migrations\201806040641083_NoteTypeAddTwoFieldsForHoursAndMinutes.Designer.cs">
+      <DependentUpon>201806040641083_NoteTypeAddTwoFieldsForHoursAndMinutes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806040738170_JobViolationExplanationOfCharges.cs" />
+    <Compile Include="Migrations\201806040738170_JobViolationExplanationOfCharges.Designer.cs">
+      <DependentUpon>201806040738170_JobViolationExplanationOfCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806040754549_DeleteTimequantityFieldfromJobTimeNote.cs" />
+    <Compile Include="Migrations\201806040754549_DeleteTimequantityFieldfromJobTimeNote.Designer.cs">
+      <DependentUpon>201806040754549_DeleteTimequantityFieldfromJobTimeNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806040818584_JobTimeNoteHistoryAddedHoursandMinutesChange.cs" />
+    <Compile Include="Migrations\201806040818584_JobTimeNoteHistoryAddedHoursandMinutesChange.Designer.cs">
+      <DependentUpon>201806040818584_JobTimeNoteHistoryAddedHoursandMinutesChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806050524269_Added3FieldsInJobWorkPermitType.cs" />
+    <Compile Include="Migrations\201806050524269_Added3FieldsInJobWorkPermitType.Designer.cs">
+      <DependentUpon>201806050524269_Added3FieldsInJobWorkPermitType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806050547452_AddedComplianceOnAndCertificationStatusInJobViolation.cs" />
+    <Compile Include="Migrations\201806050547452_AddedComplianceOnAndCertificationStatusInJobViolation.Designer.cs">
+      <DependentUpon>201806050547452_AddedComplianceOnAndCertificationStatusInJobViolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806050623211_PendingChanges.cs" />
+    <Compile Include="Migrations\201806050623211_PendingChanges.Designer.cs">
+      <DependentUpon>201806050623211_PendingChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806050813169_NewTableCreatedJobWorkPermitHistory.cs" />
+    <Compile Include="Migrations\201806050813169_NewTableCreatedJobWorkPermitHistory.Designer.cs">
+      <DependentUpon>201806050813169_NewTableCreatedJobWorkPermitHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806060528060_AddJobViolationNotesModifiedDateandByField.cs" />
+    <Compile Include="Migrations\201806060528060_AddJobViolationNotesModifiedDateandByField.Designer.cs">
+      <DependentUpon>201806060528060_AddJobViolationNotesModifiedDateandByField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806060821354_ApplicationStatusAddDisplayName.cs" />
+    <Compile Include="Migrations\201806060821354_ApplicationStatusAddDisplayName.Designer.cs">
+      <DependentUpon>201806060821354_ApplicationStatusAddDisplayName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806070725399_NewFieldsInViolation.cs" />
+    <Compile Include="Migrations\201806070725399_NewFieldsInViolation.Designer.cs">
+      <DependentUpon>201806070725399_NewFieldsInViolation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806070744297_NewFieldsInViolationResolvedDate.cs" />
+    <Compile Include="Migrations\201806070744297_NewFieldsInViolationResolvedDate.Designer.cs">
+      <DependentUpon>201806070744297_NewFieldsInViolationResolvedDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806070851156_GivereferenceInWorkPermitHistory.cs" />
+    <Compile Include="Migrations\201806070851156_GivereferenceInWorkPermitHistory.Designer.cs">
+      <DependentUpon>201806070851156_GivereferenceInWorkPermitHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806070935113_AddViolationInTask.cs" />
+    <Compile Include="Migrations\201806070935113_AddViolationInTask.Designer.cs">
+      <DependentUpon>201806070935113_AddViolationInTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806071013359_ChangeInWorkPermitHistory.cs" />
+    <Compile Include="Migrations\201806071013359_ChangeInWorkPermitHistory.Designer.cs">
+      <DependentUpon>201806071013359_ChangeInWorkPermitHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806110640401_ChangeDataTypeofGrossAreaInRfpAddress.cs" />
+    <Compile Include="Migrations\201806110640401_ChangeDataTypeofGrossAreaInRfpAddress.Designer.cs">
+      <DependentUpon>201806110640401_ChangeDataTypeofGrossAreaInRfpAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806111132147_AddNewFieldIdParentField.cs" />
+    <Compile Include="Migrations\201806111132147_AddNewFieldIdParentField.Designer.cs">
+      <DependentUpon>201806111132147_AddNewFieldIdParentField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806140516170_IsMainAddressAddedInAddress.cs" />
+    <Compile Include="Migrations\201806140516170_IsMainAddressAddedInAddress.Designer.cs">
+      <DependentUpon>201806140516170_IsMainAddressAddedInAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806190937245_TotalCostInTheJobFeeSchedule.cs" />
+    <Compile Include="Migrations\201806190937245_TotalCostInTheJobFeeSchedule.Designer.cs">
+      <DependentUpon>201806190937245_TotalCostInTheJobFeeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806191136447_DefaultContactInTaskType.cs" />
+    <Compile Include="Migrations\201806191136447_DefaultContactInTaskType.Designer.cs">
+      <DependentUpon>201806191136447_DefaultContactInTaskType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806200701197_AddSubjectInTheRfpEmail.cs" />
+    <Compile Include="Migrations\201806200701197_AddSubjectInTheRfpEmail.Designer.cs">
+      <DependentUpon>201806200701197_AddSubjectInTheRfpEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806200828095_JobViolationNote.cs" />
+    <Compile Include="Migrations\201806200828095_JobViolationNote.Designer.cs">
+      <DependentUpon>201806200828095_JobViolationNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806210840518_TransmittalChanges.cs" />
+    <Compile Include="Migrations\201806210840518_TransmittalChanges.Designer.cs">
+      <DependentUpon>201806210840518_TransmittalChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806210920047_TransmittalChangesEmployee.cs" />
+    <Compile Include="Migrations\201806210920047_TransmittalChangesEmployee.Designer.cs">
+      <DependentUpon>201806210920047_TransmittalChangesEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806211406346_AddIdJobTypeInTask.cs" />
+    <Compile Include="Migrations\201806211406346_AddIdJobTypeInTask.Designer.cs">
+      <DependentUpon>201806211406346_AddIdJobTypeInTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806260605312_AddDOBProjectTeamInJob.cs" />
+    <Compile Include="Migrations\201806260605312_AddDOBProjectTeamInJob.Designer.cs">
+      <DependentUpon>201806260605312_AddDOBProjectTeamInJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270612284_HolidayCalender.cs" />
+    <Compile Include="Migrations\201806270612284_HolidayCalender.Designer.cs">
+      <DependentUpon>201806270612284_HolidayCalender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806270659336_DEPCostSettingTable.cs" />
+    <Compile Include="Migrations\201806270659336_DEPCostSettingTable.Designer.cs">
+      <DependentUpon>201806270659336_DEPCostSettingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806280941513_AddColumnIsSignatureNewPageInRFP.cs" />
+    <Compile Include="Migrations\201806280941513_AddColumnIsSignatureNewPageInRFP.Designer.cs">
+      <DependentUpon>201806280941513_AddColumnIsSignatureNewPageInRFP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807021157389_AddDEPFieldsInJobApplication.cs" />
+    <Compile Include="Migrations\201807021157389_AddDEPFieldsInJobApplication.Designer.cs">
+      <DependentUpon>201807021157389_AddDEPFieldsInJobApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807090833379_CreateTableTaskDocuments.cs" />
+    <Compile Include="Migrations\201807090833379_CreateTableTaskDocuments.Designer.cs">
+      <DependentUpon>201807090833379_CreateTableTaskDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807120558277_AddDisplayOrderFieldInDocumentField.cs" />
+    <Compile Include="Migrations\201807120558277_AddDisplayOrderFieldInDocumentField.Designer.cs">
+      <DependentUpon>201807120558277_AddDisplayOrderFieldInDocumentField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807180808356_JobWorkTypeChanges.cs" />
+    <Compile Include="Migrations\201807180808356_JobWorkTypeChanges.Designer.cs">
+      <DependentUpon>201807180808356_JobWorkTypeChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807181017560_JobApplicationTypeChanges.cs" />
+    <Compile Include="Migrations\201807181017560_JobApplicationTypeChanges.Designer.cs">
+      <DependentUpon>201807181017560_JobApplicationTypeChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807200701462_JobApplicationAddDEPNewFields.cs" />
+    <Compile Include="Migrations\201807200701462_JobApplicationAddDEPNewFields.Designer.cs">
+      <DependentUpon>201807200701462_JobApplicationAddDEPNewFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807230607038_AddJobDocumentsInTask.cs" />
+    <Compile Include="Migrations\201807230607038_AddJobDocumentsInTask.Designer.cs">
+      <DependentUpon>201807230607038_AddJobDocumentsInTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807230845189_MakeIdJobApplicationTypeNotnull.cs" />
+    <Compile Include="Migrations\201807230845189_MakeIdJobApplicationTypeNotnull.Designer.cs">
+      <DependentUpon>201807230845189_MakeIdJobApplicationTypeNotnull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807230955052_ChangeLenghtOfCode.cs" />
+    <Compile Include="Migrations\201807230955052_ChangeLenghtOfCode.Designer.cs">
+      <DependentUpon>201807230955052_ChangeLenghtOfCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240559534_IdJobApplicationTypeCompalsoryInApplicationStatus.cs" />
+    <Compile Include="Migrations\201807240559534_IdJobApplicationTypeCompalsoryInApplicationStatus.Designer.cs">
+      <DependentUpon>201807240559534_IdJobApplicationTypeCompalsoryInApplicationStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240704102_OpenMapAddressAddNew.cs" />
+    <Compile Include="Migrations\201807240704102_OpenMapAddressAddNew.Designer.cs">
+      <DependentUpon>201807240704102_OpenMapAddressAddNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807241032563_ChangeTheDataTypeOfEstimatedCost.cs" />
+    <Compile Include="Migrations\201807241032563_ChangeTheDataTypeOfEstimatedCost.Designer.cs">
+      <DependentUpon>201807241032563_ChangeTheDataTypeOfEstimatedCost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807260951150_ChangeIntheDatatypeForDuration.cs" />
+    <Compile Include="Migrations\201807260951150_ChangeIntheDatatypeForDuration.Designer.cs">
+      <DependentUpon>201807260951150_ChangeIntheDatatypeForDuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807311305154_AddNewTableJobContactGroup.cs" />
+    <Compile Include="Migrations\201807311305154_AddNewTableJobContactGroup.Designer.cs">
+      <DependentUpon>201807311305154_AddNewTableJobContactGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020814178_CreateNewTableJobContactGroupMapping.cs" />
+    <Compile Include="Migrations\201808020814178_CreateNewTableJobContactGroupMapping.Designer.cs">
+      <DependentUpon>201808020814178_CreateNewTableJobContactGroupMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020907540_JobTransmittalAddTaskReference.cs" />
+    <Compile Include="Migrations\201808020907540_JobTransmittalAddTaskReference.Designer.cs">
+      <DependentUpon>201808020907540_JobTransmittalAddTaskReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808021338178_ChangeDataTypeOfTheTimenoteDurationColumn.cs" />
+    <Compile Include="Migrations\201808021338178_ChangeDataTypeOfTheTimenoteDurationColumn.Designer.cs">
+      <DependentUpon>201808021338178_ChangeDataTypeOfTheTimenoteDurationColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808100651494_GroupIdinTheJobTransmittalCC.cs" />
+    <Compile Include="Migrations\201808100651494_GroupIdinTheJobTransmittalCC.Designer.cs">
+      <DependentUpon>201808100651494_GroupIdinTheJobTransmittalCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808131015093_ChangetheDataTypeOfTimenotesColumn.cs" />
+    <Compile Include="Migrations\201808131015093_ChangetheDataTypeOfTimenotesColumn.Designer.cs">
+      <DependentUpon>201808131015093_ChangetheDataTypeOfTimenotesColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808131159235_AddNewColumnsForViolationAndPermitInJobDocuments.cs" />
+    <Compile Include="Migrations\201808131159235_AddNewColumnsForViolationAndPermitInJobDocuments.Designer.cs">
+      <DependentUpon>201808131159235_AddNewColumnsForViolationAndPermitInJobDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808161142343_ChangeDurationDataTypeToDouble.cs" />
+    <Compile Include="Migrations\201808161142343_ChangeDurationDataTypeToDouble.Designer.cs">
+      <DependentUpon>201808161142343_ChangeDurationDataTypeToDouble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808161230042_ChangeDurationDataTypeTostring.cs" />
+    <Compile Include="Migrations\201808161230042_ChangeDurationDataTypeTostring.Designer.cs">
+      <DependentUpon>201808161230042_ChangeDurationDataTypeTostring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808201047212_AddStatusColumnToJobApplication.cs" />
+    <Compile Include="Migrations\201808201047212_AddStatusColumnToJobApplication.Designer.cs">
+      <DependentUpon>201808201047212_AddStatusColumnToJobApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808210625336_AddColumninJobTransmittal.cs" />
+    <Compile Include="Migrations\201808210625336_AddColumninJobTransmittal.Designer.cs">
+      <DependentUpon>201808210625336_AddColumninJobTransmittal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221305138_ChangeInTheAddressMasters.cs" />
+    <Compile Include="Migrations\201808221305138_ChangeInTheAddressMasters.Designer.cs">
+      <DependentUpon>201808221305138_ChangeInTheAddressMasters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808230605026_CreateNewTableOwnerType.cs" />
+    <Compile Include="Migrations\201808230605026_CreateNewTableOwnerType.Designer.cs">
+      <DependentUpon>201808230605026_CreateNewTableOwnerType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808230616134_ChangeAddressTypeToOwnerTypeInRFPAddress.cs" />
+    <Compile Include="Migrations\201808230616134_ChangeAddressTypeToOwnerTypeInRFPAddress.Designer.cs">
+      <DependentUpon>201808230616134_ChangeAddressTypeToOwnerTypeInRFPAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808291027024_AddSecondOfficerInRfpAddress.cs" />
+    <Compile Include="Migrations\201808291027024_AddSecondOfficerInRfpAddress.Designer.cs">
+      <DependentUpon>201808291027024_AddSecondOfficerInRfpAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809070526098_StructureOccupancyCategoryCode.cs" />
+    <Compile Include="Migrations\201809070526098_StructureOccupancyCategoryCode.Designer.cs">
+      <DependentUpon>201809070526098_StructureOccupancyCategoryCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210526581_BoroughAddCounty.cs" />
+    <Compile Include="Migrations\201809210526581_BoroughAddCounty.Designer.cs">
+      <DependentUpon>201809210526581_BoroughAddCounty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809261315514_AddFaxinCompany.cs" />
+    <Compile Include="Migrations\201809261315514_AddFaxinCompany.Designer.cs">
+      <DependentUpon>201809261315514_AddFaxinCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810030939189_PaneltyScheduleMasters.cs" />
+    <Compile Include="Migrations\201810030939189_PaneltyScheduleMasters.Designer.cs">
+      <DependentUpon>201810030939189_PaneltyScheduleMasters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810040631327_AddNewPaneltyMasters.cs" />
+    <Compile Include="Migrations\201810040631327_AddNewPaneltyMasters.Designer.cs">
+      <DependentUpon>201810040631327_AddNewPaneltyMasters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810050618304_ChangeInDEPScheduleMaster.cs" />
+    <Compile Include="Migrations\201810050618304_ChangeInDEPScheduleMaster.Designer.cs">
+      <DependentUpon>201810050618304_ChangeInDEPScheduleMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810090701349_CureDate.cs" />
+    <Compile Include="Migrations\201810090701349_CureDate.Designer.cs">
+      <DependentUpon>201810090701349_CureDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810091236264_TCOFields.cs" />
+    <Compile Include="Migrations\201810091236264_TCOFields.Designer.cs">
+      <DependentUpon>201810091236264_TCOFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810120810198_IsAddPage.cs" />
+    <Compile Include="Migrations\201810120810198_IsAddPage.Designer.cs">
+      <DependentUpon>201810120810198_IsAddPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810150954539_AddPGLFieldInWorkPermitTable.cs" />
+    <Compile Include="Migrations\201810150954539_AddPGLFieldInWorkPermitTable.Designer.cs">
+      <DependentUpon>201810150954539_AddPGLFieldInWorkPermitTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811120618101_FaxNumber Add in Company Table.cs" />
+    <Compile Include="Migrations\201811120618101_FaxNumber Add in Company Table.Designer.cs">
+      <DependentUpon>201811120618101_FaxNumber Add in Company Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811120639452_FaxNumber Add in Contacts Table.cs" />
+    <Compile Include="Migrations\201811120639452_FaxNumber Add in Contacts Table.Designer.cs">
+      <DependentUpon>201811120639452_FaxNumber Add in Contacts Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811140531320_remove faxnumber from company table.cs" />
+    <Compile Include="Migrations\201811140531320_remove faxnumber from company table.Designer.cs">
+      <DependentUpon>201811140531320_remove faxnumber from company table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811210617064_ContactAddress.cs" />
+    <Compile Include="Migrations\201811210617064_ContactAddress.Designer.cs">
+      <DependentUpon>201811210617064_ContactAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811211246450_ContactEmailCheckUnique_Remove.cs" />
+    <Compile Include="Migrations\201811211246450_ContactEmailCheckUnique_Remove.Designer.cs">
+      <DependentUpon>201811211246450_ContactEmailCheckUnique_Remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811221000161_RFP_IDClientAddress_table.cs" />
+    <Compile Include="Migrations\201811221000161_RFP_IDClientAddress_table.Designer.cs">
+      <DependentUpon>201811221000161_RFP_IDClientAddress_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811231237063_remove unqieness from employee table.cs" />
+    <Compile Include="Migrations\201811231237063_remove unqieness from employee table.Designer.cs">
+      <DependentUpon>201811231237063_remove unqieness from employee table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811280928149_changes for default cc.cs" />
+    <Compile Include="Migrations\201811280928149_changes for default cc.Designer.cs">
+      <DependentUpon>201811280928149_changes for default cc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101146530_Trackingnumber_PermitNumberField_JobDocument_Table.cs" />
+    <Compile Include="Migrations\201812101146530_Trackingnumber_PermitNumberField_JobDocument_Table.Designer.cs">
+      <DependentUpon>201812101146530_Trackingnumber_PermitNumberField_JobDocument_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812190758121_change in jobHistory Discription Filed MaxLength.cs" />
+    <Compile Include="Migrations\201812190758121_change in jobHistory Discription Filed MaxLength.Designer.cs">
+      <DependentUpon>201812190758121_change in jobHistory Discription Filed MaxLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812260602065_DefaultUrl_JobApplicationWorkPermitTypes.cs" />
+    <Compile Include="Migrations\201812260602065_DefaultUrl_JobApplicationWorkPermitTypes.Designer.cs">
+      <DependentUpon>201812260602065_DefaultUrl_JobApplicationWorkPermitTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901281246553_Company Master add 2 columns of  DOT Insurance Disablility and GeneralLiability.cs" />
+    <Compile Include="Migrations\201901281246553_Company Master add 2 columns of  DOT Insurance Disablility and GeneralLiability.Designer.cs">
+      <DependentUpon>201901281246553_Company Master add 2 columns of  DOT Insurance Disablility and GeneralLiability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901290617268_ChangeColumnname_Company.cs" />
+    <Compile Include="Migrations\201901290617268_ChangeColumnname_Company.Designer.cs">
+      <DependentUpon>201901290617268_ChangeColumnname_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901300559356_ProjectDescription_Added_Rfps.cs" />
+    <Compile Include="Migrations\201901300559356_ProjectDescription_Added_Rfps.Designer.cs">
+      <DependentUpon>201901300559356_ProjectDescription_Added_Rfps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902111135575_ProjectDescription_Added_job.cs" />
+    <Compile Include="Migrations\201902111135575_ProjectDescription_Added_job.Designer.cs">
+      <DependentUpon>201902111135575_ProjectDescription_Added_job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902120532511_Showcope_Partof_Added_jobtype.cs" />
+    <Compile Include="Migrations\201902120532511_Showcope_Partof_Added_jobtype.Designer.cs">
+      <DependentUpon>201902120532511_Showcope_Partof_Added_jobtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902130924134_Partof_Added_.cs" />
+    <Compile Include="Migrations\201902130924134_Partof_Added_.Designer.cs">
+      <DependentUpon>201902130924134_Partof_Added_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902181059093_Added_IsAdditionalService_JobfeeSchedule.cs" />
+    <Compile Include="Migrations\201902181059093_Added_IsAdditionalService_JobfeeSchedule.Designer.cs">
+      <DependentUpon>201902181059093_Added_IsAdditionalService_JobfeeSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902190958554_Add_IDRFP_JobMigration.cs" />
+    <Compile Include="Migrations\201902190958554_Add_IDRFP_JobMigration.Designer.cs">
+      <DependentUpon>201902190958554_Add_IDRFP_JobMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902201019481_Add_IsMigration_JobFeeSchedules.cs" />
+    <Compile Include="Migrations\201902201019481_Add_IsMigration_JobFeeSchedules.Designer.cs">
+      <DependentUpon>201902201019481_Add_IsMigration_JobFeeSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903040925157_Add CompletedDate_Column.cs" />
+    <Compile Include="Migrations\201903040925157_Add CompletedDate_Column.Designer.cs">
+      <DependentUpon>201903040925157_Add CompletedDate_Column.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903060927444_AddParent_jobfeeschedule.cs" />
+    <Compile Include="Migrations\201903060927444_AddParent_jobfeeschedule.Designer.cs">
+      <DependentUpon>201903060927444_AddParent_jobfeeschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903071018396_Add_Lastmodifiedby_jobfeeschedule.cs" />
+    <Compile Include="Migrations\201903071018396_Add_Lastmodifiedby_jobfeeschedule.Designer.cs">
+      <DependentUpon>201903071018396_Add_Lastmodifiedby_jobfeeschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903080556276_Add_Createdby_jobfeeschedule.cs" />
+    <Compile Include="Migrations\201903080556276_Add_Createdby_jobfeeschedule.Designer.cs">
+      <DependentUpon>201903080556276_Add_Createdby_jobfeeschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903150915461_Add_Ishow_column_in_Jobfeeschedule.cs" />
+    <Compile Include="Migrations\201903150915461_Add_Ishow_column_in_Jobfeeschedule.Designer.cs">
+      <DependentUpon>201903150915461_Add_Ishow_column_in_Jobfeeschedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903180922326_Add_FromTask_Flag_onJobFeeschedule_Table.cs" />
+    <Compile Include="Migrations\201903180922326_Add_FromTask_Flag_onJobFeeschedule_Table.Designer.cs">
+      <DependentUpon>201903180922326_Add_FromTask_Flag_onJobFeeschedule_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903180934295_Add_IsFromScope_Column_Flag_onJobFeeschedule_Table.cs" />
+    <Compile Include="Migrations\201903180934295_Add_IsFromScope_Column_Flag_onJobFeeschedule_Table.Designer.cs">
+      <DependentUpon>201903180934295_Add_IsFromScope_Column_Flag_onJobFeeschedule_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904021353065_Idccontact_Column_Nullable_Create.cs" />
+    <Compile Include="Migrations\201904021353065_Idccontact_Column_Nullable_Create.Designer.cs">
+      <DependentUpon>201904021353065_Idccontact_Column_Nullable_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904050650579_Add_Column_QBBobName_Job.cs" />
+    <Compile Include="Migrations\201904050650579_Add_Column_QBBobName_Job.Designer.cs">
+      <DependentUpon>201904050650579_Add_Column_QBBobName_Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904060711284_Change_EmailSubjectLength.cs" />
+    <Compile Include="Migrations\201904060711284_Change_EmailSubjectLength.Designer.cs">
+      <DependentUpon>201904060711284_Change_EmailSubjectLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080931490_Change_Datatypewodth_JobTransmital.cs" />
+    <Compile Include="Migrations\201904080931490_Change_Datatypewodth_JobTransmital.Designer.cs">
+      <DependentUpon>201904080931490_Change_Datatypewodth_JobTransmital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905011321142_Timenotehistory_increasewidth.cs" />
+    <Compile Include="Migrations\201905011321142_Timenotehistory_increasewidth.Designer.cs">
+      <DependentUpon>201905011321142_Timenotehistory_increasewidth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905310601096_Increase width of 2 columns in table.cs" />
+    <Compile Include="Migrations\201905310601096_Increase width of 2 columns in table.Designer.cs">
+      <DependentUpon>201905310601096_Increase width of 2 columns in table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906210852151_Add_Idmilestone Field in Task and Task Hiostory.cs" />
+    <Compile Include="Migrations\201906210852151_Add_Idmilestone Field in Task and Task Hiostory.Designer.cs">
+      <DependentUpon>201906210852151_Add_Idmilestone Field in Task and Task Hiostory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907160807591_Add_columns_in_documentmaster_fields.cs" />
+    <Compile Include="Migrations\201907160807591_Add_columns_in_documentmaster_fields.Designer.cs">
+      <DependentUpon>201907160807591_Add_columns_in_documentmaster_fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907310906370_Add_column_IsActive_Tasktype.cs" />
+    <Compile Include="Migrations\201907310906370_Add_column_IsActive_Tasktype.Designer.cs">
+      <DependentUpon>201907310906370_Add_column_IsActive_Tasktype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908070954486_Add_column_Serviceitem_contact.cs" />
+    <Compile Include="Migrations\201908070954486_Add_column_Serviceitem_contact.Designer.cs">
+      <DependentUpon>201908070954486_Add_column_Serviceitem_contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910070842322_Createtable_DOBPermit.cs" />
+    <Compile Include="Migrations\201910070842322_Createtable_DOBPermit.Designer.cs">
+      <DependentUpon>201910070842322_Createtable_DOBPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910090806429_Add_Columns_DOBPermit.cs" />
+    <Compile Include="Migrations\201910090806429_Add_Columns_DOBPermit.Designer.cs">
+      <DependentUpon>201910090806429_Add_Columns_DOBPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912260807429_Add_Column_Signoff_Jobapplication.cs" />
+    <Compile Include="Migrations\201912260807429_Add_Column_Signoff_Jobapplication.Designer.cs">
+      <DependentUpon>201912260807429_Add_Column_Signoff_Jobapplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111100612520_CompanyDocument.cs" />
+    <Compile Include="Migrations\202111100612520_CompanyDocument.Designer.cs">
+      <DependentUpon>202111100612520_CompanyDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112270624003_IdJobWorkType.cs" />
+    <Compile Include="Migrations\202112270624003_IdJobWorkType.Designer.cs">
+      <DependentUpon>202112270624003_IdJobWorkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203281545574_delete IdJobWorkType.cs" />
+    <Compile Include="Migrations\202203281545574_delete IdJobWorkType.Designer.cs">
+      <DependentUpon>202203281545574_delete IdJobWorkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203291424095_Isgeneric.cs" />
+    <Compile Include="Migrations\202203291424095_Isgeneric.Designer.cs">
+      <DependentUpon>202203291424095_Isgeneric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202204110556484_IsBSADecision.cs" />
+    <Compile Include="Migrations\202204110556484_IsBSADecision.Designer.cs">
+      <DependentUpon>202204110556484_IsBSADecision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ChecklistAddressProperty .cs" />
+    <Compile Include="Models\CheckListGroup.cs" />
+    <Compile Include="Models\ChecklistJobViolationComment.cs" />
+    <Compile Include="Models\ChekListItem.cs" />
+    <Compile Include="Models\ClientNoteCustomer.cs" />
+    <Compile Include="Models\ClientNotePlumbingCustomer.cs" />
+    <Compile Include="Models\CompanyDocument.cs" />
+    <Compile Include="Models\CompanyLicense.cs" />
+    <Compile Include="Models\CompanyLicenseType.cs" />
+    <Compile Include="Models\CompositeChecklist.cs" />
+    <Compile Include="Models\CompositeChecklistDetail.cs" />
+    <Compile Include="Models\CompositeViolations.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerInvitationStatus.cs" />
+    <Compile Include="Models\CustomerJobAccess.cs" />
+    <Compile Include="Models\CustomerJobName.cs" />
+    <Compile Include="Models\CustomerNotification.cs" />
+    <Compile Include="Models\CustomerNotificationSetting.cs" />
+    <Compile Include="Models\CustomerPasswordReset.cs" />
+    <Compile Include="Models\DEPNoiseCodePenaltySchedule.cs" />
+    <Compile Include="Models\DOBPenaltySchedule.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\DOBPermitMapping.cs" />
+    <Compile Include="Models\DOTPenaltySchedule.cs" />
+    <Compile Include="Models\DOHMHCoolingTowerPenaltySchedule.cs" />
+    <Compile Include="Models\Enums\ChecklistStstus.cs" />
+    <Compile Include="Models\FDNYPenaltySchedule.cs" />
+    <Compile Include="Models\JobCheckListCommentHistory.cs" />
+    <Compile Include="Models\JobChecklistGroup.cs" />
+    <Compile Include="Models\JobChecklistGroupDetail.cs" />
+    <Compile Include="Models\JobChecklistHeader.cs" />
+    <Compile Include="Models\JobChecklistItemDetail.cs" />
+    <Compile Include="Models\JobChecklistItemDueDate.cs" />
+    <Compile Include="Models\JobChecklistPlumbingInspection.cs" />
+    <Compile Include="Models\JobCheckListProgressNoteHistory.cs" />
+    <Compile Include="Models\JobPlumbingChecklistFloors.cs" />
+    <Compile Include="Models\JobPlumbingInspection.cs" />
+    <Compile Include="Models\JobPlumbingInspectionComment.cs" />
+    <Compile Include="Models\JobPlumbingInspectionDueDate.cs" />
+    <Compile Include="Models\JobPlumbingInspectionProgressNoteHistory.cs" />
+    <Compile Include="Models\JobProgressNote.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\OwnerType.cs" />
+    <Compile Include="Models\JobContactJobContactGroup.cs" />
+    <Compile Include="Models\JobContactGroup.cs" />
+    <Compile Include="Models\DEPCostSetting.cs" />
+    <Compile Include="Models\HolidayCalender.cs" />
+    <Compile Include="Models\Enums\AllergyType.cs" />
+    <Compile Include="Models\JobTransmittalJobDocument.cs" />
+    <Compile Include="Models\JobViolationDocument.cs" />
+    <Compile Include="Models\JobViolationExplanationOfCharges.cs" />
+    <Compile Include="Models\JobWorkPermitHistory.cs" />
+    <Compile Include="Models\JobViolationNote.cs" />
+    <Compile Include="Models\Responsibility.cs" />
+    <Compile Include="Models\TaskJobDocument.cs" />
+    <Compile Include="Models\TaskDocument.cs" />
+    <Compile Include="Models\ViolationPaneltyCode.cs" />
+    <Compile Include="Models\JobViolation.cs" />
+    <Compile Include="Models\AddressType.cs" />
+    <Compile Include="Models\AgentCertificate.cs" />
+    <Compile Include="Models\ApplicationStatus.cs" />
+    <Compile Include="Models\Borough.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\CompanyEmailAttachmentHistory.cs" />
+    <Compile Include="Models\CompanyEmailCCHistory.cs" />
+    <Compile Include="Models\ContactLicenseType.cs" />
+    <Compile Include="Models\ContactTitle.cs" />
+    <Compile Include="Models\DocumentMaster.cs" />
+    <Compile Include="Models\DocumentField.cs" />
+    <Compile Include="Models\DocumentType.cs" />
+    <Compile Include="Models\RfpDocument.cs" />
+    <Compile Include="Models\EmployeePermission.cs" />
+    <Compile Include="Models\Enums\ControlType.cs" />
+    <Compile Include="Models\Enums\FieldDataType.cs" />
+    <Compile Include="Models\Enums\JobBillingType.cs" />
+    <Compile Include="Models\Enums\RfpCostType.cs" />
+    <Compile Include="Models\Enums\VerbiageType.cs" />
+    <Compile Include="Models\Field.cs" />
+    <Compile Include="Models\JobDocumentAttachment.cs" />
+    <Compile Include="Models\JobDocumentField.cs" />
+    <Compile Include="Models\JobDocumentType.cs" />
+    <Compile Include="Models\JobTransmittalAttachment.cs" />
+    <Compile Include="Models\ContactEmailAttachmentHistory.cs" />
+    <Compile Include="Models\JobTransmittalCC.cs" />
+    <Compile Include="Models\ContactEmailCCHistory.cs" />
+    <Compile Include="Models\ContactEmailHistory.cs" />
+    <Compile Include="Models\CompanyType.cs" />
+    <Compile Include="Models\ConstructionClassification.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\ContactDocument.cs" />
+    <Compile Include="Models\ContactLicense.cs" />
+    <Compile Include="Models\Enums\JobStatus.cs" />
+    <Compile Include="Models\CompanyEmailHistory.cs" />
+    <Compile Include="Models\JobMilestoneService.cs" />
+    <Compile Include="Models\MilestoneService.cs" />
+    <Compile Include="Models\MultipleDwellingClassification.cs" />
+    <Compile Include="Models\OpenMapAddress.cs" />
+    <Compile Include="Models\Permission.cs" />
+    <Compile Include="Models\Prefix.cs" />
+    <Compile Include="Models\JobFeeSchedule.cs" />
+    <Compile Include="Models\RfpFeeSchedule.cs" />
+    <Compile Include="Models\RfpJobType.cs" />
+    <Compile Include="Models\RfpJobTypeCostRange.cs" />
+    <Compile Include="Models\RfpJobTypeCumulativeCost.cs" />
+    <Compile Include="Models\RfpProgressNote.cs" />
+    <Compile Include="Models\RfpReviewer.cs" />
+    <Compile Include="Models\RfpStatus.cs" />
+    <Compile Include="Models\EmailType.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeDocument.cs" />
+    <Compile Include="Models\Enums\FunctionGrantType.cs" />
+    <Compile Include="Models\Enums\JobHistoryType.cs" />
+    <Compile Include="Models\Enums\PersonalType.cs" />
+    <Compile Include="Models\Enums\GrantType.cs" />
+    <Compile Include="Models\Enums\ScopeReviewRecientsType.cs" />
+    <Compile Include="Models\Enums\ScopeReviewSectionType.cs" />
+    <Compile Include="Models\Enums\TimeCategory.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\JobApplication.cs" />
+    <Compile Include="Models\JobApplicationWorkPermitType.cs" />
+    <Compile Include="Models\JobContact.cs" />
+    <Compile Include="Models\JobDocument.cs" />
+    <Compile Include="Models\JobHistory.cs" />
+    <Compile Include="Models\JobMilestone.cs" />
+    <Compile Include="Models\JobScope.cs" />
+    <Compile Include="Models\SystemSetting.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\JobContactType.cs" />
+    <Compile Include="Models\JobTimeNoteCategory.cs" />
+    <Compile Include="Models\JobTimeNote.cs" />
+    <Compile Include="Models\JobTransmittal.cs" />
+    <Compile Include="Models\JobApplicationType.cs" />
+    <Compile Include="Models\Milestone.cs" />
+    <Compile Include="Models\OccupancyClassification.cs" />
+    <Compile Include="Models\PrimaryStructuralSystem.cs" />
+    <Compile Include="Models\ProjectDetail.cs" />
+    <Compile Include="Models\ReferenceDocument.cs" />
+    <Compile Include="Models\ReferenceLink.cs" />
+    <Compile Include="Models\Rfp.cs" />
+    <Compile Include="Models\RfpAddress.cs" />
+    <Compile Include="Models\RFPEmailAttachmentHistory.cs" />
+    <Compile Include="Models\RFPEmailCCHistory.cs" />
+    <Compile Include="Models\RFPEmailHistory.cs" />
+    <Compile Include="Models\RfpProposalReview.cs" />
+    <Compile Include="Models\RfpScopeReview.cs" />
+    <Compile Include="Models\SeismicDesignCategory.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\StructureOccupancyCategory.cs" />
+    <Compile Include="Models\Suffix.cs" />
+    <Compile Include="Models\TaskEmailReminderLog.cs" />
+    <Compile Include="Models\JobTimeNoteHistory.cs" />
+    <Compile Include="Models\TaskHistory.cs" />
+    <Compile Include="Models\TaskReminder.cs" />
+    <Compile Include="Models\TaskNote.cs" />
+    <Compile Include="Models\TaskStatus.cs" />
+    <Compile Include="Models\TaskType.cs" />
+    <Compile Include="Models\TaxIdType.cs" />
+    <Compile Include="Models\TransmissionTypeDefaultCC.cs" />
+    <Compile Include="Models\TransmissionType.cs" />
+    <Compile Include="Models\UserGroupPermission.cs" />
+    <Compile Include="Models\UserNotification.cs" />
+    <Compile Include="Models\Verbiage.cs" />
+    <Compile Include="Models\JobWorkType.cs" />
+    <Compile Include="RpoBusinessException.cs" />
+    <Compile Include="RpoContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rpo.Identity.Core\Rpo.Identity.Core.csproj">
+      <Project>{6b5b5a2e-620a-4d91-9073-c56aac9c2b6b}</Project>
+      <Name>Rpo.Identity.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710042357492_Initial.resx">
+      <DependentUpon>201710042357492_Initial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710061407299_CompanyContact.resx">
+      <DependentUpon>201710061407299_CompanyContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710061754062_ContactLicense_Number_toString.resx">
+      <DependentUpon>201710061754062_ContactLicense_Number_toString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710081504030_CompanyFix.resx">
+      <DependentUpon>201710081504030_CompanyFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710161108289_Aditional_Group_Grants.resx">
+      <DependentUpon>201710161108289_Aditional_Group_Grants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710181441296_Correcting_Companies.resx">
+      <DependentUpon>201710181441296_Correcting_Companies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251616124_Employee_NewFields.resx">
+      <DependentUpon>201710251616124_Employee_NewFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710251618269_Company_NewFields.resx">
+      <DependentUpon>201710251618269_Company_NewFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710301618101_Employee_AdditionalGrants.resx">
+      <DependentUpon>201710301618101_Employee_AdditionalGrants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710311724018_Masters_Grant_GroupAndEmployee.resx">
+      <DependentUpon>201710311724018_Masters_Grant_GroupAndEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711012220575_RfpInitial.resx">
+      <DependentUpon>201711012220575_RfpInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711041314473_CompanyRfpAddress.resx">
+      <DependentUpon>201711041314473_CompanyRfpAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711041656378_Project-Details.resx">
+      <DependentUpon>201711041656378_Project-Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711051216531_BoroughRfpAddress.resx">
+      <DependentUpon>201711051216531_BoroughRfpAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060114265_ScopeReview.resx">
+      <DependentUpon>201711060114265_ScopeReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060152551_ProposalReview.resx">
+      <DependentUpon>201711060152551_ProposalReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711070148136_generalChanges.resx">
+      <DependentUpon>201711070148136_generalChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711091358096_RfpModifiedDate.resx">
+      <DependentUpon>201711091358096_RfpModifiedDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711092027056_CompanyXContact.resx">
+      <DependentUpon>201711092027056_CompanyXContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711101228246_ContactDocuments.resx">
+      <DependentUpon>201711101228246_ContactDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711111244375_FixeEmployeeLastNameIndex.resx">
+      <DependentUpon>201711111244375_FixeEmployeeLastNameIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711131137523_Employee_IdCity_nullable.resx">
+      <DependentUpon>201711131137523_Employee_IdCity_nullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711131235334_ReferredNotMadatoryOnRfp.resx">
+      <DependentUpon>201711131235334_ReferredNotMadatoryOnRfp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711131811046_Employee_WillCauseCascadeOnDelete_On_AgentCertificate_And_EmployeeDocument.resx">
+      <DependentUpon>201711131811046_Employee_WillCauseCascadeOnDelete_On_AgentCertificate_And_EmployeeDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711141108503_CascadeDeleteOnContactRelations.resx">
+      <DependentUpon>201711141108503_CascadeDeleteOnContactRelations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711171510340_Verbiage.resx">
+      <DependentUpon>201711171510340_Verbiage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711172300335_JobWorkContent.resx">
+      <DependentUpon>201711172300335_JobWorkContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711181833557_ForeignKeyIdRfp.resx">
+      <DependentUpon>201711181833557_ForeignKeyIdRfp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711182045177_EmailTransmissionTypes.resx">
+      <DependentUpon>201711182045177_EmailTransmissionTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711240159005_ScopeReviewSection.resx">
+      <DependentUpon>201711240159005_ScopeReviewSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711270138542_RfpAdressNonMandatoryFields.resx">
+      <DependentUpon>201711270138542_RfpAdressNonMandatoryFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711281142489_ReferenceLinks.resx">
+      <DependentUpon>201711281142489_ReferenceLinks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711281226000_ReferenceDocumentsAndReferenceLinksFixes.resx">
+      <DependentUpon>201711281226000_ReferenceDocumentsAndReferenceLinksFixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711301011487_Jobs.resx">
+      <DependentUpon>201711301011487_Jobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711301317543_Jobs2.resx">
+      <DependentUpon>201711301317543_Jobs2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712011017141_lastDateModified.resx">
+      <DependentUpon>201712011017141_lastDateModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021354230_RpfOnJob.resx">
+      <DependentUpon>201712021354230_RpfOnJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021842260_DocumentContent.resx">
+      <DependentUpon>201712021842260_DocumentContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021902374_JobsMilestonesScopes.resx">
+      <DependentUpon>201712021902374_JobsMilestonesScopes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712021955447_AdjustMilestoneValueDataType.resx">
+      <DependentUpon>201712021955447_AdjustMilestoneValueDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712060946511_ContactAllOptinal.resx">
+      <DependentUpon>201712060946511_ContactAllOptinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712061039109_ChangeReferenceDocuments.resx">
+      <DependentUpon>201712061039109_ChangeReferenceDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712070104172_companyURL.resx">
+      <DependentUpon>201712070104172_companyURL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712072247339_ChangesOnCompanyContactsAddress.resx">
+      <DependentUpon>201712072247339_ChangesOnCompanyContactsAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712072300170_CompanyTypeArray.resx">
+      <DependentUpon>201712072300170_CompanyTypeArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712081505249_CompanyTypeNested.resx">
+      <DependentUpon>201712081505249_CompanyTypeNested.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712091631125_ContactTitleSize.resx">
+      <DependentUpon>201712091631125_ContactTitleSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712111315415_ChangeUniquenessContactEmail.resx">
+      <DependentUpon>201712111315415_ChangeUniquenessContactEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712111534274_NewRfpAddressFields.resx">
+      <DependentUpon>201712111534274_NewRfpAddressFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121054590_RfpCompanyAndAddressOptional.resx">
+      <DependentUpon>201712121054590_RfpCompanyAndAddressOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121105029_ExportGrants.resx">
+      <DependentUpon>201712121105029_ExportGrants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712131131244_UnnitOnMilestone.resx">
+      <DependentUpon>201712131131244_UnnitOnMilestone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712131509322_JobMilestoneLastUpdate.resx">
+      <DependentUpon>201712131509322_JobMilestoneLastUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712140320046_ChangesJobsScopeAndProjectDetails.resx">
+      <DependentUpon>201712140320046_ChangesJobsScopeAndProjectDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712181702447_filecontentAndMilestoneUnit.resx">
+      <DependentUpon>201712181702447_filecontentAndMilestoneUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270521260_MakeIdcontactNotNull.resx">
+      <DependentUpon>201712270521260_MakeIdcontactNotNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270755095_AddColumnForContactImagepath.resx">
+      <DependentUpon>201712270755095_AddColumnForContactImagepath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712270949487_AddColumnForEmployeeAndRFP.resx">
+      <DependentUpon>201712270949487_AddColumnForEmployeeAndRFP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712280819019_AddnewFieldinRFPforSaved.resx">
+      <DependentUpon>201712280819019_AddnewFieldinRFPforSaved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712301208009_AddColumnforContactThumbImagePath.resx">
+      <DependentUpon>201712301208009_AddColumnforContactThumbImagePath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801030654558_AddLoginpasswordInEmployeeTable.resx">
+      <DependentUpon>201801030654558_AddLoginpasswordInEmployeeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801030804503_AddDocumentPathInEmployeeDocument.resx">
+      <DependentUpon>201801030804503_AddDocumentPathInEmployeeDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801050532335_CreateJobApplicationType.resx">
+      <DependentUpon>201801050532335_CreateJobApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801050944026_ChangeForeignKeyinJobApplication.resx">
+      <DependentUpon>201801050944026_ChangeForeignKeyinJobApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801080617531_SolveTheJobApplicationTypeError.resx">
+      <DependentUpon>201801080617531_SolveTheJobApplicationTypeError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801080920589_AddApplicationStatusTable.resx">
+      <DependentUpon>201801080920589_AddApplicationStatusTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801081533038_JobHasJobs.resx">
+      <DependentUpon>201801081533038_JobHasJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801090631593_RenameJobApplicationForColumn.resx">
+      <DependentUpon>201801090631593_RenameJobApplicationForColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801090930323_JobHistory.resx">
+      <DependentUpon>201801090930323_JobHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801110641580_AddHoliday-EmbargoInJob.resx">
+      <DependentUpon>201801110641580_AddHoliday-EmbargoInJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801111147578_MakeApplicationStatusoptional.resx">
+      <DependentUpon>201801111147578_MakeApplicationStatusoptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801121242028_AddJobIdColumninJobHistory.resx">
+      <DependentUpon>201801121242028_AddJobIdColumninJobHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801121404239_EditColumnsForJobWorkPermits.resx">
+      <DependentUpon>201801121404239_EditColumnsForJobWorkPermits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801130831588_MakeContactNotMandatory.resx">
+      <DependentUpon>201801130831588_MakeContactNotMandatory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801142311170_JobContactChanges.resx">
+      <DependentUpon>201801142311170_JobContactChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801150211067_JobTimeNotes.resx">
+      <DependentUpon>201801150211067_JobTimeNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801160634382_RenameTheColumnFloorworking.resx">
+      <DependentUpon>201801160634382_RenameTheColumnFloorworking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801161236482_MakeEmployeeIdNotrequired.resx">
+      <DependentUpon>201801161236482_MakeEmployeeIdNotrequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801170600167_MakeUnitandValueNullable.resx">
+      <DependentUpon>201801170600167_MakeUnitandValueNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801171449506_ChangeTheReferenceDocumentNameLength.resx">
+      <DependentUpon>201801171449506_ChangeTheReferenceDocumentNameLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801180824340_ChangeLastModifiedByColumn.resx">
+      <DependentUpon>201801180824340_ChangeLastModifiedByColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801190820516_ChangesJobTimeNoteTable.resx">
+      <DependentUpon>201801190820516_ChangesJobTimeNoteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801220739595_ChangesInContatctType.resx">
+      <DependentUpon>201801220739595_ChangesInContatctType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801220914329_AddressTypeDisplayOrder.resx">
+      <DependentUpon>201801220914329_AddressTypeDisplayOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801221249492_ApplyforeignKeyToIdBorough.resx">
+      <DependentUpon>201801221249492_ApplyforeignKeyToIdBorough.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801230527039_ChangeJobContactAddress.resx">
+      <DependentUpon>201801230527039_ChangeJobContactAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801230539396_MakeIdCompanyNullable.resx">
+      <DependentUpon>201801230539396_MakeIdCompanyNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801231125337_CreateTableforRFPEmail.resx">
+      <DependentUpon>201801231125337_CreateTableforRFPEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801231247162_ChangeTheEmailHistoryTable.resx">
+      <DependentUpon>201801231247162_ChangeTheEmailHistoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801231540092_TaskNotes.resx">
+      <DependentUpon>201801231540092_TaskNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801240600013_ChangeInJobTask.resx">
+      <DependentUpon>201801240600013_ChangeInJobTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241422161_RemoveTheContentColumn.resx">
+      <DependentUpon>201801241422161_RemoveTheContentColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801250818204_AddCloseDate.resx">
+      <DependentUpon>201801250818204_AddCloseDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801270543434_CreateTableTaskReminders.resx">
+      <DependentUpon>201801270543434_CreateTableTaskReminders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801290520052_AddReminderDate.resx">
+      <DependentUpon>201801290520052_AddReminderDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802010138568_BisCode.resx">
+      <DependentUpon>201802010138568_BisCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802010520567_MergetheChanges.resx">
+      <DependentUpon>201802010520567_MergetheChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802011320302_CreateEmailLogTable.resx">
+      <DependentUpon>201802011320302_CreateEmailLogTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802020818065_ChangethelengthofTheFields.resx">
+      <DependentUpon>201802020818065_ChangethelengthofTheFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802050720168_CreateMasterforJobStatus.resx">
+      <DependentUpon>201802050720168_CreateMasterforJobStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802050844095_RewartTheJobStatusChanges.resx">
+      <DependentUpon>201802050844095_RewartTheJobStatusChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802060530457_AddNewColumnsInRFP.resx">
+      <DependentUpon>201802060530457_AddNewColumnsInRFP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802060931142_AddNewColumnsInRFPStatus.resx">
+      <DependentUpon>201802060931142_AddNewColumnsInRFPStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802070545478_ChangelengthOfZipcode.resx">
+      <DependentUpon>201802070545478_ChangelengthOfZipcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802080927235_AddLastModifiedDateAndCreatedDate.resx">
+      <DependentUpon>201802080927235_AddLastModifiedDateAndCreatedDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802080937454_AddLastModifiedDateInEmployee.resx">
+      <DependentUpon>201802080937454_AddLastModifiedDateInEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802081029477_ChangeDateNullable.resx">
+      <DependentUpon>201802081029477_ChangeDateNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802121207099_AddRemoveColumnsFromJobTimeNotes.resx">
+      <DependentUpon>201802121207099_AddRemoveColumnsFromJobTimeNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802121303565_AddRemoveColumnsFromJobTimeNotesCategories.resx">
+      <DependentUpon>201802121303565_AddRemoveColumnsFromJobTimeNotesCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140858055_AddNewFieldsInEmailType.resx">
+      <DependentUpon>201802140858055_AddNewFieldsInEmailType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141055087_AddNewFieldsInJobContactType.resx">
+      <DependentUpon>201802141055087_AddNewFieldsInJobContactType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141300080_AddNewTablesForSendEmail.resx">
+      <DependentUpon>201802141300080_AddNewTablesForSendEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141334437_AddNewTablesJobTimeNotes.resx">
+      <DependentUpon>201802141334437_AddNewTablesJobTimeNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802151251420_AddColumnsInMasterTables.resx">
+      <DependentUpon>201802151251420_AddColumnsInMasterTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802161033390_CreateTableTrasmissionTypeDefaultCC.resx">
+      <DependentUpon>201802161033390_CreateTableTrasmissionTypeDefaultCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802190606313_AddNewFieldsInEmployee.resx">
+      <DependentUpon>201802190606313_AddNewFieldsInEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802191145521_AddJobTrasmittalTable.resx">
+      <DependentUpon>201802191145521_AddJobTrasmittalTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802200557310_AddCommonColumnsInMasterTables.resx">
+      <DependentUpon>201802200557310_AddCommonColumnsInMasterTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802211118291_AddProjectTeamColumns.resx">
+      <DependentUpon>201802211118291_AddProjectTeamColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802220514306_MakeJobTimeNoteCategoryNameUnique.resx">
+      <DependentUpon>201802220514306_MakeJobTimeNoteCategoryNameUnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802220650137_ProjectTeamMemberOptional.resx">
+      <DependentUpon>201802220650137_ProjectTeamMemberOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802220901211_ProjectManagerOptional.resx">
+      <DependentUpon>201802220901211_ProjectManagerOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802230836418_Make AddressTypeNullable.resx">
+      <DependentUpon>201802230836418_Make AddressTypeNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802231347037_AddNewColumnInJobtransmittalAttachement.resx">
+      <DependentUpon>201802231347037_AddNewColumnInJobtransmittalAttachement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802240837006_ChangeFieldsNullable.resx">
+      <DependentUpon>201802240837006_ChangeFieldsNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802270737063_AddIsArchiveColumnInEmployee.resx">
+      <DependentUpon>201802270737063_AddIsArchiveColumnInEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080613116_CreateTableRFPJobTypes.resx">
+      <DependentUpon>201803080613116_CreateTableRFPJobTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080643045_MakeCompanyOptionalInJob.resx">
+      <DependentUpon>201803080643045_MakeCompanyOptionalInJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080818530_MakeCreatedByOptional.resx">
+      <DependentUpon>201803080818530_MakeCreatedByOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803090527595_AddIsDefaultColumnInVerbiages.resx">
+      <DependentUpon>201803090527595_AddIsDefaultColumnInVerbiages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803090946189_ChangeInRFPDataStracture.resx">
+      <DependentUpon>201803090946189_ChangeInRFPDataStracture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803100635425_AddNewFieldInVerbiagies.resx">
+      <DependentUpon>201803100635425_AddNewFieldInVerbiagies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121306139_AddControlFieldsInRfpWorkType.resx">
+      <DependentUpon>201803121306139_AddControlFieldsInRfpWorkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803130922087_MakeWorkTypeMasterNotUnique.resx">
+      <DependentUpon>201803130922087_MakeWorkTypeMasterNotUnique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803130958387_AddNewFieldsForRFPMasters.resx">
+      <DependentUpon>201803130958387_AddNewFieldsForRFPMasters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803140946004_AddNewTableUserNotifications.resx">
+      <DependentUpon>201803140946004_AddNewTableUserNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803150804529_AddNewColumnsInUserNotification.resx">
+      <DependentUpon>201803150804529_AddNewColumnsInUserNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803150905169_AddNewTableRfpProgressNote.resx">
+      <DependentUpon>201803150905169_AddNewTableRfpProgressNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803150920068_AddNewTableRfpReviewer.resx">
+      <DependentUpon>201803150920068_AddNewTableRfpReviewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803160650292_AddTaskTypeIsDisplay.resx">
+      <DependentUpon>201803160650292_AddTaskTypeIsDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803160808320_AddNewFieldsInRfpJobType.resx">
+      <DependentUpon>201803160808320_AddNewFieldsInRfpJobType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803190648558_ChangesInRFPJobTypeMaster.resx">
+      <DependentUpon>201803190648558_ChangesInRFPJobTypeMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803200555564_ChangeInPriceRangeTableForWorkType.resx">
+      <DependentUpon>201803200555564_ChangeInPriceRangeTableForWorkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803201313243_ChangeInFeeScheduleDataStrcture.resx">
+      <DependentUpon>201803201313243_ChangeInFeeScheduleDataStrcture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803210708441_AddRfpCumulativeCost.resx">
+      <DependentUpon>201803210708441_AddRfpCumulativeCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803210903310_UpdateRfpJobTypeCumulativeCost.resx">
+      <DependentUpon>201803210903310_UpdateRfpJobTypeCumulativeCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803211018386_UpdateRfpJobTypeCumulativeCostToICollection.resx">
+      <DependentUpon>201803211018386_UpdateRfpJobTypeCumulativeCostToICollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803211028468_ChangeIdentityRfpScopeReview.resx">
+      <DependentUpon>201803211028468_ChangeIdentityRfpScopeReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803211319107_MakeIdRFPSubJobTypeNullable.resx">
+      <DependentUpon>201803211319107_MakeIdRFPSubJobTypeNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803220518360_AddRfpForeignKeyToFeeSchedule.resx">
+      <DependentUpon>201803220518360_AddRfpForeignKeyToFeeSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803230837187_IsCurrentStatusOfFiling.resx">
+      <DependentUpon>201803230837187_IsCurrentStatusOfFiling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803240618223_DisprovedJobNumber.resx">
+      <DependentUpon>201803240618223_DisprovedJobNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803240823169_New_Changes.resx">
+      <DependentUpon>201803240823169_New_Changes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803260645001_AddTableMilestoneServices.resx">
+      <DependentUpon>201803260645001_AddTableMilestoneServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803281116473_AddDisplayOrderInDisplayOrder.resx">
+      <DependentUpon>201803281116473_AddDisplayOrderInDisplayOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803290533414_AddDisplayOrderInRfpjobType.resx">
+      <DependentUpon>201803290533414_AddDisplayOrderInRfpjobType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803290804300_AddTaskNumberInTask.resx">
+      <DependentUpon>201803290804300_AddTaskNumberInTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804040931215_CreateTableSystemSetting.resx">
+      <DependentUpon>201804040931215_CreateTableSystemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804041024379_CreateDataStructureEmployeePermission.resx">
+      <DependentUpon>201804041024379_CreateDataStructureEmployeePermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804041142508_ChangeinGroupPermission.resx">
+      <DependentUpon>201804041142508_ChangeinGroupPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804060644283_MakeFeeScheduleQuantityDecimal.resx">
+      <DependentUpon>201804060644283_MakeFeeScheduleQuantityDecimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804090948062_JobMilestoneChanges.resx">
+      <DependentUpon>201804090948062_JobMilestoneChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804091253160_JobFeeScheduleChamges.resx">
+      <DependentUpon>201804091253160_JobFeeScheduleChamges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804100639194_CreateTableJobMilestoneServices.resx">
+      <DependentUpon>201804100639194_CreateTableJobMilestoneServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804130641157_JobMilestoneNewColumns.resx">
+      <DependentUpon>201804130641157_JobMilestoneNewColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804160606541_AddNewColumnsInTask.resx">
+      <DependentUpon>201804160606541_AddNewColumnsInTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804161025091_ChangeAddQuanityInTask.resx">
+      <DependentUpon>201804161025091_ChangeAddQuanityInTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804170402162_GroupInAddPermissionsField.resx">
+      <DependentUpon>201804170402162_GroupInAddPermissionsField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804170654147_ChangeTheRightsforEmployee.resx">
+      <DependentUpon>201804170654147_ChangeTheRightsforEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804171020193_PermissionModelChange.resx">
+      <DependentUpon>201804171020193_PermissionModelChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804171359420_DocumentsFielddocumentfieldsmapping.resx">
+      <DependentUpon>201804171359420_DocumentsFielddocumentfieldsmapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804180836051_AddColumninRFPFeeSchedule.resx">
+      <DependentUpon>201804180836051_AddColumninRFPFeeSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804181013465_JobDocumentModelchangeJobdocumentFieldModelAddJobDocumentAttachmentModelAdd.resx">
+      <DependentUpon>201804181013465_JobDocumentModelchangeJobdocumentFieldModelAddJobDocumentAttachmentModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200554461_DocumentFieldsPdffieldscolumnadded.resx">
+      <DependentUpon>201804200554461_DocumentFieldsPdffieldscolumnadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804191143396_CreateTableTaskHistory.resx">
+      <DependentUpon>201804191143396_CreateTableTaskHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200642378_ChangesMerge.resx">
+      <DependentUpon>201804200642378_ChangesMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804201007181_IdJobFeeScheduleMakeForeignkey.resx">
+      <DependentUpon>201804201007181_IdJobFeeScheduleMakeForeignkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804230638287_AddIsRemovedFlagInJobFeeSchedule.resx">
+      <DependentUpon>201804230638287_AddIsRemovedFlagInJobFeeSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231222094_AddNewFieldInPermission.resx">
+      <DependentUpon>201804231222094_AddNewFieldInPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231153207_AddFieldStaticDescriptioninDocumentFieldandAddFieldIsFrontEndDisplayinField.resx">
+      <DependentUpon>201804231153207_AddFieldStaticDescriptioninDocumentFieldandAddFieldIsFrontEndDisplayinField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804231248250_KrunalMergeChanges.resx">
+      <DependentUpon>201804231248250_KrunalMergeChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240622316_ChangeinTaskWorkpermit.resx">
+      <DependentUpon>201804240622316_ChangeinTaskWorkpermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804240859442_PermissionClass.resx">
+      <DependentUpon>201804240859442_PermissionClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804241322489_ContactTitleChanges.resx">
+      <DependentUpon>201804241322489_ContactTitleChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804241345004_AddIsPlaceHolderfieldintblDocumentFields.resx">
+      <DependentUpon>201804241345004_AddIsPlaceHolderfieldintblDocumentFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804250600487_AddnewFieldInTaskTaskDuration.resx">
+      <DependentUpon>201804250600487_AddnewFieldInTaskTaskDuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804251118141_CreateTableOpenMapAddress.resx">
+      <DependentUpon>201804251118141_CreateTableOpenMapAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804251225032_AddDisplayOrderColumnInPermission.resx">
+      <DependentUpon>201804251225032_AddDisplayOrderColumnInPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804260724457_ChangeColumnsInOpenMapDataTable.resx">
+      <DependentUpon>201804260724457_ChangeColumnsInOpenMapDataTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804271134429_JobDocumentTypeModelAdded.resx">
+      <DependentUpon>201804271134429_JobDocumentTypeModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011107576_EmployeeLAstModifiedBy.resx">
+      <DependentUpon>201805011107576_EmployeeLAstModifiedBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011127539_GiveForeignKeyEmployee.resx">
+      <DependentUpon>201805011127539_GiveForeignKeyEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805070522422_ChangeInVerbiageMaster.resx">
+      <DependentUpon>201805070522422_ChangeInVerbiageMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805071242516_AddNewTableRfpAttachedDocument.resx">
+      <DependentUpon>201805071242516_AddNewTableRfpAttachedDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080558281_ChangeInRFPDocuements.resx">
+      <DependentUpon>201805080558281_ChangeInRFPDocuements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805080955566_CreateTableForJobViolation.resx">
+      <DependentUpon>201805080955566_CreateTableForJobViolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090524022_JobDocumentAddedFieldformodifiedempdetails.resx">
+      <DependentUpon>201805090524022_JobDocumentAddedFieldformodifiedempdetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090734463_ChangeInTimeNotes.resx">
+      <DependentUpon>201805090734463_ChangeInTimeNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805090822123_JobDocumentfieldchange.resx">
+      <DependentUpon>201805090822123_JobDocumentfieldchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091015446_AddCOCFields.resx">
+      <DependentUpon>201805091015446_AddCOCFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091205035_QBEmployeeName.resx">
+      <DependentUpon>201805091205035_QBEmployeeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805110800273_CreateTimenoteHistoryTable.resx">
+      <DependentUpon>201805110800273_CreateTimenoteHistoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805111040500_CreatePaneltyTable.resx">
+      <DependentUpon>201805111040500_CreatePaneltyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805140555450_CreateJobViolationDocumentTable.resx">
+      <DependentUpon>201805140555450_CreateJobViolationDocumentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805140752209_ChangeApplicationAddNewColumn.resx">
+      <DependentUpon>201805140752209_ChangeApplicationAddNewColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805151202421_CreateTableForJobTransmittal.resx">
+      <DependentUpon>201805151202421_CreateTableForJobTransmittal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805161005527_AddFieldsInWorkPermit.resx">
+      <DependentUpon>201805161005527_AddFieldsInWorkPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805161113065_ChangeInPaneltyCodeTable.resx">
+      <DependentUpon>201805161113065_ChangeInPaneltyCodeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805210651148_AllergyInEmployee.resx">
+      <DependentUpon>201805210651148_AllergyInEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805220754582_NewFieldsForWorkPermit.resx">
+      <DependentUpon>201805220754582_NewFieldsForWorkPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805230907195_AddNewFieldsInJobForDOT.resx">
+      <DependentUpon>201805230907195_AddNewFieldsInJobForDOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805231222433_ChnageInWorkPErmitForDOT.resx">
+      <DependentUpon>201805231222433_ChnageInWorkPErmitForDOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805250812517_DefaultValueInDocumentField.resx">
+      <DependentUpon>201805250812517_DefaultValueInDocumentField.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805251059284_DisplayFieldNameInDocumentField.resx">
+      <DependentUpon>201805251059284_DisplayFieldNameInDocumentField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805251218556_AddDisplayOrderInDocument.resx">
+      <DependentUpon>201805251218556_AddDisplayOrderInDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805251303576_AddDocumentIdInJobDocumentType.resx">
+      <DependentUpon>201805251303576_AddDocumentIdInJobDocumentType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805280522112_IsDevelopementCompleted.resx">
+      <DependentUpon>201805280522112_IsDevelopementCompleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805280544458_Added Job document field actual value.resx">
+      <DependentUpon>201805280544458_Added Job document field actual value.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805280736138_ParentJobJobDocument.resx">
+      <DependentUpon>201805280736138_ParentJobJobDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805291229548_PaneltyCodeSection.resx">
+      <DependentUpon>201805291229548_PaneltyCodeSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806040641083_NoteTypeAddTwoFieldsForHoursAndMinutes.resx">
+      <DependentUpon>201806040641083_NoteTypeAddTwoFieldsForHoursAndMinutes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806040738170_JobViolationExplanationOfCharges.resx">
+      <DependentUpon>201806040738170_JobViolationExplanationOfCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806040754549_DeleteTimequantityFieldfromJobTimeNote.resx">
+      <DependentUpon>201806040754549_DeleteTimequantityFieldfromJobTimeNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806040818584_JobTimeNoteHistoryAddedHoursandMinutesChange.resx">
+      <DependentUpon>201806040818584_JobTimeNoteHistoryAddedHoursandMinutesChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806050524269_Added3FieldsInJobWorkPermitType.resx">
+      <DependentUpon>201806050524269_Added3FieldsInJobWorkPermitType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806050547452_AddedComplianceOnAndCertificationStatusInJobViolation.resx">
+      <DependentUpon>201806050547452_AddedComplianceOnAndCertificationStatusInJobViolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806050623211_PendingChanges.resx">
+      <DependentUpon>201806050623211_PendingChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806050813169_NewTableCreatedJobWorkPermitHistory.resx">
+      <DependentUpon>201806050813169_NewTableCreatedJobWorkPermitHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806060528060_AddJobViolationNotesModifiedDateandByField.resx">
+      <DependentUpon>201806060528060_AddJobViolationNotesModifiedDateandByField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806060821354_ApplicationStatusAddDisplayName.resx">
+      <DependentUpon>201806060821354_ApplicationStatusAddDisplayName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806070725399_NewFieldsInViolation.resx">
+      <DependentUpon>201806070725399_NewFieldsInViolation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806070744297_NewFieldsInViolationResolvedDate.resx">
+      <DependentUpon>201806070744297_NewFieldsInViolationResolvedDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806070851156_GivereferenceInWorkPermitHistory.resx">
+      <DependentUpon>201806070851156_GivereferenceInWorkPermitHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806070935113_AddViolationInTask.resx">
+      <DependentUpon>201806070935113_AddViolationInTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806071013359_ChangeInWorkPermitHistory.resx">
+      <DependentUpon>201806071013359_ChangeInWorkPermitHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806110640401_ChangeDataTypeofGrossAreaInRfpAddress.resx">
+      <DependentUpon>201806110640401_ChangeDataTypeofGrossAreaInRfpAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111132147_AddNewFieldIdParentField.resx">
+      <DependentUpon>201806111132147_AddNewFieldIdParentField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806140516170_IsMainAddressAddedInAddress.resx">
+      <DependentUpon>201806140516170_IsMainAddressAddedInAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806190937245_TotalCostInTheJobFeeSchedule.resx">
+      <DependentUpon>201806190937245_TotalCostInTheJobFeeSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806191136447_DefaultContactInTaskType.resx">
+      <DependentUpon>201806191136447_DefaultContactInTaskType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806200701197_AddSubjectInTheRfpEmail.resx">
+      <DependentUpon>201806200701197_AddSubjectInTheRfpEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806200828095_JobViolationNote.resx">
+      <DependentUpon>201806200828095_JobViolationNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210840518_TransmittalChanges.resx">
+      <DependentUpon>201806210840518_TransmittalChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806210920047_TransmittalChangesEmployee.resx">
+      <DependentUpon>201806210920047_TransmittalChangesEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806211406346_AddIdJobTypeInTask.resx">
+      <DependentUpon>201806211406346_AddIdJobTypeInTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806260605312_AddDOBProjectTeamInJob.resx">
+      <DependentUpon>201806260605312_AddDOBProjectTeamInJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270612284_HolidayCalender.resx">
+      <DependentUpon>201806270612284_HolidayCalender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806270659336_DEPCostSettingTable.resx">
+      <DependentUpon>201806270659336_DEPCostSettingTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806280941513_AddColumnIsSignatureNewPageInRFP.resx">
+      <DependentUpon>201806280941513_AddColumnIsSignatureNewPageInRFP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807021157389_AddDEPFieldsInJobApplication.resx">
+      <DependentUpon>201807021157389_AddDEPFieldsInJobApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807090833379_CreateTableTaskDocuments.resx">
+      <DependentUpon>201807090833379_CreateTableTaskDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807120558277_AddDisplayOrderFieldInDocumentField.resx">
+      <DependentUpon>201807120558277_AddDisplayOrderFieldInDocumentField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807180808356_JobWorkTypeChanges.resx">
+      <DependentUpon>201807180808356_JobWorkTypeChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181017560_JobApplicationTypeChanges.resx">
+      <DependentUpon>201807181017560_JobApplicationTypeChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807200701462_JobApplicationAddDEPNewFields.resx">
+      <DependentUpon>201807200701462_JobApplicationAddDEPNewFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807230607038_AddJobDocumentsInTask.resx">
+      <DependentUpon>201807230607038_AddJobDocumentsInTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807230845189_MakeIdJobApplicationTypeNotnull.resx">
+      <DependentUpon>201807230845189_MakeIdJobApplicationTypeNotnull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807230955052_ChangeLenghtOfCode.resx">
+      <DependentUpon>201807230955052_ChangeLenghtOfCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240559534_IdJobApplicationTypeCompalsoryInApplicationStatus.resx">
+      <DependentUpon>201807240559534_IdJobApplicationTypeCompalsoryInApplicationStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240704102_OpenMapAddressAddNew.resx">
+      <DependentUpon>201807240704102_OpenMapAddressAddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807241032563_ChangeTheDataTypeOfEstimatedCost.resx">
+      <DependentUpon>201807241032563_ChangeTheDataTypeOfEstimatedCost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807260951150_ChangeIntheDatatypeForDuration.resx">
+      <DependentUpon>201807260951150_ChangeIntheDatatypeForDuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807311305154_AddNewTableJobContactGroup.resx">
+      <DependentUpon>201807311305154_AddNewTableJobContactGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808020814178_CreateNewTableJobContactGroupMapping.resx">
+      <DependentUpon>201808020814178_CreateNewTableJobContactGroupMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808020907540_JobTransmittalAddTaskReference.resx">
+      <DependentUpon>201808020907540_JobTransmittalAddTaskReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808021338178_ChangeDataTypeOfTheTimenoteDurationColumn.resx">
+      <DependentUpon>201808021338178_ChangeDataTypeOfTheTimenoteDurationColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808100651494_GroupIdinTheJobTransmittalCC.resx">
+      <DependentUpon>201808100651494_GroupIdinTheJobTransmittalCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808131015093_ChangetheDataTypeOfTimenotesColumn.resx">
+      <DependentUpon>201808131015093_ChangetheDataTypeOfTimenotesColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808131159235_AddNewColumnsForViolationAndPermitInJobDocuments.resx">
+      <DependentUpon>201808131159235_AddNewColumnsForViolationAndPermitInJobDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808161142343_ChangeDurationDataTypeToDouble.resx">
+      <DependentUpon>201808161142343_ChangeDurationDataTypeToDouble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808161230042_ChangeDurationDataTypeTostring.resx">
+      <DependentUpon>201808161230042_ChangeDurationDataTypeTostring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808201047212_AddStatusColumnToJobApplication.resx">
+      <DependentUpon>201808201047212_AddStatusColumnToJobApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808210625336_AddColumninJobTransmittal.resx">
+      <DependentUpon>201808210625336_AddColumninJobTransmittal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221305138_ChangeInTheAddressMasters.resx">
+      <DependentUpon>201808221305138_ChangeInTheAddressMasters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808230605026_CreateNewTableOwnerType.resx">
+      <DependentUpon>201808230605026_CreateNewTableOwnerType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808230616134_ChangeAddressTypeToOwnerTypeInRFPAddress.resx">
+      <DependentUpon>201808230616134_ChangeAddressTypeToOwnerTypeInRFPAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808291027024_AddSecondOfficerInRfpAddress.resx">
+      <DependentUpon>201808291027024_AddSecondOfficerInRfpAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809070526098_StructureOccupancyCategoryCode.resx">
+      <DependentUpon>201809070526098_StructureOccupancyCategoryCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210526581_BoroughAddCounty.resx">
+      <DependentUpon>201809210526581_BoroughAddCounty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809261315514_AddFaxinCompany.resx">
+      <DependentUpon>201809261315514_AddFaxinCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810030939189_PaneltyScheduleMasters.resx">
+      <DependentUpon>201810030939189_PaneltyScheduleMasters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810040631327_AddNewPaneltyMasters.resx">
+      <DependentUpon>201810040631327_AddNewPaneltyMasters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810050618304_ChangeInDEPScheduleMaster.resx">
+      <DependentUpon>201810050618304_ChangeInDEPScheduleMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810090701349_CureDate.resx">
+      <DependentUpon>201810090701349_CureDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810091236264_TCOFields.resx">
+      <DependentUpon>201810091236264_TCOFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810120810198_IsAddPage.resx">
+      <DependentUpon>201810120810198_IsAddPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810150954539_AddPGLFieldInWorkPermitTable.resx">
+      <DependentUpon>201810150954539_AddPGLFieldInWorkPermitTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811120618101_FaxNumber Add in Company Table.resx">
+      <DependentUpon>201811120618101_FaxNumber Add in Company Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811120639452_FaxNumber Add in Contacts Table.resx">
+      <DependentUpon>201811120639452_FaxNumber Add in Contacts Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811140531320_remove faxnumber from company table.resx">
+      <DependentUpon>201811140531320_remove faxnumber from company table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811210617064_ContactAddress.resx">
+      <DependentUpon>201811210617064_ContactAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811211246450_ContactEmailCheckUnique_Remove.resx">
+      <DependentUpon>201811211246450_ContactEmailCheckUnique_Remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811221000161_RFP_IDClientAddress_table.resx">
+      <DependentUpon>201811221000161_RFP_IDClientAddress_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811231237063_remove unqieness from employee table.resx">
+      <DependentUpon>201811231237063_remove unqieness from employee table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811280928149_changes for default cc.resx">
+      <DependentUpon>201811280928149_changes for default cc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101146530_Trackingnumber_PermitNumberField_JobDocument_Table.resx">
+      <DependentUpon>201812101146530_Trackingnumber_PermitNumberField_JobDocument_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812190758121_change in jobHistory Discription Filed MaxLength.resx">
+      <DependentUpon>201812190758121_change in jobHistory Discription Filed MaxLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812260602065_DefaultUrl_JobApplicationWorkPermitTypes.resx">
+      <DependentUpon>201812260602065_DefaultUrl_JobApplicationWorkPermitTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901281246553_Company Master add 2 columns of  DOT Insurance Disablility and GeneralLiability.resx">
+      <DependentUpon>201901281246553_Company Master add 2 columns of  DOT Insurance Disablility and GeneralLiability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901290617268_ChangeColumnname_Company.resx">
+      <DependentUpon>201901290617268_ChangeColumnname_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901300559356_ProjectDescription_Added_Rfps.resx">
+      <DependentUpon>201901300559356_ProjectDescription_Added_Rfps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902111135575_ProjectDescription_Added_job.resx">
+      <DependentUpon>201902111135575_ProjectDescription_Added_job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902120532511_Showcope_Partof_Added_jobtype.resx">
+      <DependentUpon>201902120532511_Showcope_Partof_Added_jobtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902130924134_Partof_Added_.resx">
+      <DependentUpon>201902130924134_Partof_Added_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902181059093_Added_IsAdditionalService_JobfeeSchedule.resx">
+      <DependentUpon>201902181059093_Added_IsAdditionalService_JobfeeSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902190958554_Add_IDRFP_JobMigration.resx">
+      <DependentUpon>201902190958554_Add_IDRFP_JobMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902201019481_Add_IsMigration_JobFeeSchedules.resx">
+      <DependentUpon>201902201019481_Add_IsMigration_JobFeeSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903040925157_Add CompletedDate_Column.resx">
+      <DependentUpon>201903040925157_Add CompletedDate_Column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903060927444_AddParent_jobfeeschedule.resx">
+      <DependentUpon>201903060927444_AddParent_jobfeeschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903071018396_Add_Lastmodifiedby_jobfeeschedule.resx">
+      <DependentUpon>201903071018396_Add_Lastmodifiedby_jobfeeschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903080556276_Add_Createdby_jobfeeschedule.resx">
+      <DependentUpon>201903080556276_Add_Createdby_jobfeeschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903150915461_Add_Ishow_column_in_Jobfeeschedule.resx">
+      <DependentUpon>201903150915461_Add_Ishow_column_in_Jobfeeschedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903180922326_Add_FromTask_Flag_onJobFeeschedule_Table.resx">
+      <DependentUpon>201903180922326_Add_FromTask_Flag_onJobFeeschedule_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903180934295_Add_IsFromScope_Column_Flag_onJobFeeschedule_Table.resx">
+      <DependentUpon>201903180934295_Add_IsFromScope_Column_Flag_onJobFeeschedule_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904021353065_Idccontact_Column_Nullable_Create.resx">
+      <DependentUpon>201904021353065_Idccontact_Column_Nullable_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904050650579_Add_Column_QBBobName_Job.resx">
+      <DependentUpon>201904050650579_Add_Column_QBBobName_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904060711284_Change_EmailSubjectLength.resx">
+      <DependentUpon>201904060711284_Change_EmailSubjectLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080931490_Change_Datatypewodth_JobTransmital.resx">
+      <DependentUpon>201904080931490_Change_Datatypewodth_JobTransmital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905011321142_Timenotehistory_increasewidth.resx">
+      <DependentUpon>201905011321142_Timenotehistory_increasewidth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905310601096_Increase width of 2 columns in table.resx">
+      <DependentUpon>201905310601096_Increase width of 2 columns in table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906210852151_Add_Idmilestone Field in Task and Task Hiostory.resx">
+      <DependentUpon>201906210852151_Add_Idmilestone Field in Task and Task Hiostory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907160807591_Add_columns_in_documentmaster_fields.resx">
+      <DependentUpon>201907160807591_Add_columns_in_documentmaster_fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907310906370_Add_column_IsActive_Tasktype.resx">
+      <DependentUpon>201907310906370_Add_column_IsActive_Tasktype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908070954486_Add_column_Serviceitem_contact.resx">
+      <DependentUpon>201908070954486_Add_column_Serviceitem_contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910070842322_Createtable_DOBPermit.resx">
+      <DependentUpon>201910070842322_Createtable_DOBPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910090806429_Add_Columns_DOBPermit.resx">
+      <DependentUpon>201910090806429_Add_Columns_DOBPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912260807429_Add_Column_Signoff_Jobapplication.resx">
+      <DependentUpon>201912260807429_Add_Column_Signoff_Jobapplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111100612520_CompanyDocument.resx">
+      <DependentUpon>202111100612520_CompanyDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112270624003_IdJobWorkType.resx">
+      <DependentUpon>202112270624003_IdJobWorkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203281545574_delete IdJobWorkType.resx">
+      <DependentUpon>202203281545574_delete IdJobWorkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203291424095_Isgeneric.resx">
+      <DependentUpon>202203291424095_Isgeneric.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204110556484_IsBSADecision.resx">
+      <DependentUpon>202204110556484_IsBSADecision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309240435121_prodmigration.resx">
+      <DependentUpon>202309240435121_prodmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402140709397_cuimigration.resx">
+      <DependentUpon>202402140709397_cuimigration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Constants\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

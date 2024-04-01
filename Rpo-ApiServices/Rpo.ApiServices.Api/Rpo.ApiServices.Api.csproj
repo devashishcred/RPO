@@ -1,0 +1,1187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7086F17-4BB2-4E2F-B6FB-6FCC9FB87E86}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rpo.ApiServices.Api</RootNamespace>
+    <AssemblyName>Rpo.ApiServices.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Rpo.ApiServices.Api.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dropbox.Api, Version=4.0.0.0, Culture=neutral, PublicKeyToken=310f0e82fbb45d01, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dropbox.Api.4.9.0\lib\net45\Dropbox.Api.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.6.5.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.6.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3RPartyLibrary\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=1.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Abstractions.1.0.4\lib\net451\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=1.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.1.0.4\lib\net451\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.1.0.3\lib\net451\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Extensions.1.0.3\lib\net451\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Http.Features.1.0.3\lib\net451\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing, Version=1.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.1.0.4\lib\net451\Microsoft.AspNetCore.Routing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Routing.Abstractions, Version=1.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Routing.Abstractions.1.0.4\lib\net451\Microsoft.AspNetCore.Routing.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.StaticFiles, Version=1.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.StaticFiles.1.0.4\lib\net451\Microsoft.AspNetCore.StaticFiles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.1.0.2\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.1.0.2\lib\netstandard1.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Abstractions.1.0.1\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Embedded, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.FileProviders.Embedded.1.0.1\lib\netstandard1.0\Microsoft.Extensions.FileProviders.Embedded.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.1.0.2\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.ObjectPool.1.0.1\lib\net451\Microsoft.Extensions.ObjectPool.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=1.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.1.0.2\lib\netstandard1.0\Microsoft.Extensions.Options.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.1.0.1\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.WebEncoders, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.WebEncoders.1.0.3\lib\netstandard1.0\Microsoft.Extensions.WebEncoders.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.4\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.4\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=1.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.1.0.3\lib\netstandard1.1\Microsoft.Net.Http.Headers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Jwt, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Jwt.3.1.0\lib\net45\Microsoft.Owin.Security.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3RPartyLibrary\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3RPartyLibrary\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3RPartyLibrary\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3RPartyLibrary\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.6.1.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.2.6.1\lib\net40\Quartz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SODA">
+      <HintPath>..\SODA\bin\Debug\SODA.dll</HintPath>
+    </Reference>
+    <Reference Include="Swashbuckle.AspNetCore.SwaggerUI, Version=3.0.0.0, Culture=neutral, PublicKeyToken=4232c99127b3c254, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.AspNetCore.SwaggerUI.3.0.0\lib\net451\Swashbuckle.AspNetCore.SwaggerUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.0.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=4.0.20622.1351, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.2.206221351\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.0.1\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Thinktecture.IdentityModel.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Core.1.4.0\lib\net45\Thinktecture.IdentityModel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="3RPartyLibrary\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="3RPartyLibrary\Microsoft.ApplicationBlocks.Data.dll" />
+    <Content Include="3RPartyLibrary\NPOI.dll" />
+    <Content Include="3RPartyLibrary\NPOI.OOXML.dll" />
+    <Content Include="3RPartyLibrary\NPOI.OpenXml4Net.dll" />
+    <Content Include="3RPartyLibrary\NPOI.OpenXmlFormats.dll" />
+    <Content Include="3RPartyLibrary\SignalR.dll" />
+    <Content Include="3RPartyLibrary\SignalR.Hosting.AspNet.dll" />
+    <Content Include="3RPartyLibrary\SignalR.Hosting.Common.dll" />
+    <Content Include="3RPartyLibrary\SignalR.Hosting.Common.xml" />
+    <Content Include="3RPartyLibrary\SignalR.xml" />
+    <Content Include="bin\Microsoft.ApplicationBlocks.Data.dll" />
+    <Content Include="EmailTemplate\ChangePasswordEmailTemplate.html" />
+    <Content Include="EmailTemplate\DOBApplicationStatusapiTemplate.htm" />
+    <Content Include="EmailTemplate\DOBPermitStatusapiTemplate.htm" />
+    <Content Include="EmailTemplate\invitationMailer.html" />
+    <Content Include="EmailTemplate\JobReOpenEmailTemplate.htm" />
+    <Content Include="EmailTemplate\JobMarkedCompletedEmailTemplate.htm" />
+    <Content Include="EmailTemplate\JobPutInProgressFromHoldEmailTemplate.htm" />
+    <Content Include="EmailTemplate\JobPutOnHoldEmailTemplate.htm" />
+    <Content Include="EmailTemplate\JobViolationsStatusapiTemplate.htm" />
+    <Content Include="EmailTemplate\NewJobMilestoneCompletedTemplate.htm" />
+    <Content Include="EmailTemplate\Passwrod-ResetMailTemplate.html" />
+    <Content Include="EmailTemplate\ProjectAccessMailTemplate.html" />
+    <Content Include="EmailTemplate\ProposalRequestMailTemplate.html" />
+    <Content Include="EmailTemplate\reminderMailer.html" />
+    <Content Include="EmailTemplate\RFPConvertedToJobEmailTemplate.htm" />
+    <Content Include="EmailTemplate\NewMemberAddedToJobProjectTeam.htm" />
+    <Content Include="EmailTemplate\NewJobEmailTemplate.htm" />
+    <Content Include="EmailTemplate\NewJobScopeAdded.htm" />
+    <Content Include="EmailTemplate\NewJobMilestoneAddedTemplate.htm" />
+    <Content Include="EmailTemplate\NewTaskAssignedEmailTemplate.htm" />
+    <Content Include="EmailTemplate\RFPInDraftNotifyAdminTemplate.htm" />
+    <Content Include="EmailTemplate\RfpProgressNoteTemplate.htm" />
+    <Content Include="EmailTemplate\RFPRequestForApproval.htm" />
+    <Content Include="EmailTemplate\RFPReviewedAndApproved.htm" />
+    <Content Include="EmailTemplate\RFPSubmittedNotifyToUserTemplate.htm" />
+    <Content Include="EmailTemplate\RFPInDraftNotifyToUserTemplate.htm" />
+    <Content Include="EmailTemplate\TaskCompleted.htm" />
+    <Content Include="EmailTemplate\TaskProgressNoteTemplate.htm" />
+    <Content Include="EmailTemplate\MasterEmailTemplate.htm" />
+    <Content Include="EmailTemplate\TaskCompletedEmailTemplate.htm" />
+    <Content Include="EmailTemplate\TaskReminderTemplate.htm" />
+    <Content Include="EmailTemplate\VARPMTEmailTemplate.htm" />
+    <Content Include="EmailTemplate\CustomerServiceMailer.html" />
+    <Content Include="EmailTemplate\violationMailer.html" />
+    <Content Include="EmailTemplate\welcomeMailer.html" />
+    <Content Include="ExportToExcelTemplate\ApplicationStatusTemplate.xlsx" />
+    <Content Include="HTML\images\kd-sign.jpg" />
+    <Content Include="HTML\images\linkin.png" />
+    <Content Include="HTML\images\logo-black.png" />
+    <Content Include="HTML\images\logo-footer.jpg" />
+    <Content Include="HTML\images\logo-new.jpg" />
+    <Content Include="HTML\images\logo.jpg" />
+    <Content Include="HTML\images\logo.png" />
+    <Content Include="HTML\images\Robot_1_177x68.jpg" />
+    <Content Include="HTML\images\RPO-Logo-pdf.png" />
+    <Content Include="HTML\images\Signature-MGP_bBya.jpg" />
+    <Content Include="HTML\images\snapcor-logo-small.jpg" />
+    <Content Include="HTML\images\snapcor-logo-small.png" />
+    <Content Include="HTML\images\snapcor-new.jpg" />
+    <Content Include="HTML\images\violation_alert2.png" />
+    <Content Include="HTML\rpo-pdf.html" />
+    <Content Include="JobDocumentAddPageTemplate\ZRD1_AddPageTemplate.pdf" />
+    <Content Include="JobDocumentPDFTemplate\10DAYN-62395.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BPP9-62445.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BPPSPC-62438.pdf" />
+    <Content Include="JobDocumentPDFTemplate\CARBON-62424.pdf" />
+    <Content Include="JobDocumentPDFTemplate\CD5- Notification of staging and outrigger beam use.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Container Informtion Form CIF-62429.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Contractor Information Sheet CIS-62430.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Demolition Checklist DEMCHK-62433.pdf" />
+    <Content Include="JobDocumentPDFTemplate\DEP non-premise permit application for hydrant DEPHYD-62434.pdf" />
+    <Content Include="JobDocumentPDFTemplate\DEPRFD-62442.pdf" />
+    <Content Include="JobDocumentPDFTemplate\DS1-62451.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Multiple OATHECB Violations Submission.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Registration for Demolition.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Statement in Support of Certificate Correction.pdf" />
+    <Content Include="JobDocumentPDFTemplate\900A-76289.pdf" />
+    <Content Include="JobDocumentPDFTemplate\best4_83.PDF" />
+    <Content Include="JobDocumentPDFTemplate\best_appt_form_89.pdf" />
+    <Content Include="JobDocumentPDFTemplate\borough_intake_form_121.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BPP11-62441.pdf" />
+    <Content Include="JobDocumentPDFTemplate\bpp15_92.pdf" />
+    <Content Include="JobDocumentPDFTemplate\bpp16_93.pdf" />
+    <Content Include="JobDocumentPDFTemplate\bpp8_91.pdf" />
+    <Content Include="JobDocumentPDFTemplate\b_form_10_h_84.pdf" />
+    <Content Include="JobDocumentPDFTemplate\b_form_10_j_85.pdf" />
+    <Content Include="JobDocumentPDFTemplate\b_form_20_ss_87.pdf" />
+    <Content Include="JobDocumentPDFTemplate\b_form_24_ss_88.pdf" />
+    <Content Include="JobDocumentPDFTemplate\hc7_101.pdf" />
+    <Content Include="JobDocumentPDFTemplate\hrt-1_102.pdf" />
+    <Content Include="JobDocumentPDFTemplate\lic6_103.pdf" />
+    <Content Include="JobDocumentPDFTemplate\lic7_104.pdf" />
+    <Content Include="JobDocumentPDFTemplate\lno_lov_form_105.pdf" />
+    <Content Include="JobDocumentPDFTemplate\poc3_123.pdf" />
+    <Content Include="JobDocumentPDFTemplate\regapp_119.pdf" />
+    <Content Include="JobDocumentPDFTemplate\roadway_closure_app_135.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TM5_145.pdf" />
+    <Content Include="JobDocumentPDFTemplate\tr5h_155.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Boiler Waiver of Civil Penalties Form.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Design Professional Licensee Seal and Signature Form.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Elevator Application.pdf" />
+    <Content Include="JobDocumentPDFTemplate\ER1.pdf" />
+    <Content Include="JobDocumentPDFTemplate\ER2.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Sewer Self Certification House Connection Proposal.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LL5 of 1973 Information Checklist.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LL58 of 1987 Accessibility Waiver Request.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Open Application Cover Letter.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Professional Certification Audits and Inspections Appointment.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Property Profile Change Request.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Request for Certificate of Occupancy with Open Applications Cover Letter.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Self-Certification for Removal of Existing Boiler.pdf" />
+    <Content Include="JobDocumentPDFTemplate\M11-77191.pdf" />
+    <Content Include="JobDocumentPDFTemplate\M11CM-77192.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR6-76630.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR7-76629.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR8-76628.pdf" />
+    <Content Include="JobDocumentPDFTemplate\ZD1-76625.pdf" />
+    <Content Include="JobDocumentPDFTemplate\ZRD1-76626.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BPP5-77778.pdf" />
+    <Content Include="JobDocumentPDFTemplate\EUP25A-78408.pdf" />
+    <Content Include="JobDocumentPDFTemplate\POC1-78391.pdf" />
+    <Content Include="JobDocumentPDFTemplate\HIC1-78414.pdf" />
+    <Content Include="JobDocumentPDFTemplate\HPD1-78415.pdf" />
+    <Content Include="JobDocumentPDFTemplate\HPD2-78422.pdf" />
+    <Content Include="JobDocumentPDFTemplate\HPD3-78423.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PF1-78453.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR108-76637.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TM3-79178.pdf" />
+    <Content Include="JobDocumentPDFTemplate\ST1-76643.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RP602c-76647.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PC1-79175.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PD1-79176.pdf" />
+    <Content Include="JobDocumentPDFTemplate\SIGNHC-76645.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TPP1-76638.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR209-79226.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR309-79227.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR408-79229.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR3P-79228.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW1a-79497.pdf" />
+    <Content Include="JobDocumentPDFTemplate\SMOKE-79299.pdf" />
+    <Content Include="JobDocumentPDFTemplate\EN2-79616.pdf" />
+    <Content Include="JobDocumentPDFTemplate\L2-79681.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LXCNE-79739.pdf" />
+    <Content Include="JobDocumentPDFTemplate\MIRF-79692.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PA1-79752.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PAFA-79511.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PER11-79806.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LF2-79862.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LFTA-79749.pdf" />
+    <Content Include="JobDocumentPDFTemplate\AEU2-62401.pdf" />
+    <Content Include="JobDocumentPDFTemplate\AI1-62402.pdf" />
+    <Content Include="JobDocumentPDFTemplate\AI1FS-62407.pdf" />
+    <Content Include="JobDocumentPDFTemplate\B2A-62420.pdf" />
+    <Content Include="JobDocumentPDFTemplate\APC501-62409.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BEST4-62435.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BPA-62436.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BPP1-62440.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LL 260414.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW513-81459.pdf" />
+    <Content Include="JobDocumentPDFTemplate\OIS-79747.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RP602-82452.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PRA-82699.pdf" />
+    <Content Include="ExportToExcelTemplate\RFPReportTemplate.xlsx" />
+    <Content Include="ExportToExcelTemplate\TCO_PermitExpirationTemplate.xlsx" />
+    <Content Include="JobDocumentPDFTemplate\bpp16.pdf" />
+    <Content Include="JobDocumentPDFTemplate\b_form_10_h.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BINTAK-82776.pdf" />
+    <Content Include="JobDocumentAddPageTemplate\ZD1_AddPageTemplate.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW517.pdf" />
+    <Content Include="JobDocumentAddPageTemplate\CCD1_AddPageTemplate.pdf" />
+    <Content Include="JobDocumentAddPageTemplate\PW1A_AddPageTemplate.pdf" />
+    <Content Include="JobDocumentAddPageTemplate\AI-1_AddPageTemplate.pdf" />
+    <Content Include="JobDocumentPDFTemplate\pw1_new.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW108-84568.pdf" />
+    <Content Include="JobDocumentPDFTemplate\OCMC_Meeting Request Letter_Editable Final.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI_List of Special-Progress-Energy Inspections.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI_Special Inspector Information.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI_Project Information Sheet.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR-1-76636.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW1b.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW1c.pdf" />
+    <Content Include="JobDocumentPDFTemplate\govt_work_permit_reissue_app.pdf" />
+    <Content Include="JobDocumentPDFTemplate\DOT_App to Renew Gov Work Permit%28s%29_LkH4.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW7_102020.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW6IA.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW4.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW210.pdf" />
+    <Content Include="JobDocumentPDFTemplate\aeu3321.pdf" />
+    <Content Include="JobDocumentPDFTemplate\l2_0719_NEW.pdf" />
+    <Content Include="JobDocumentPDFTemplate\pw1_0819_New.pdf" />
+    <Content Include="JobDocumentPDFTemplate\aeu2_2019.pdf" />
+    <Content Include="ExportToExcelTemplate\CompaniesTemplate.xlsx" />
+    <Content Include="ExportToExcelTemplate\ContactsTemplate.xlsx" />
+    <Content Include="JobDocumentPDFTemplate\CCD1-79512.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI DOB NOW - Mechanical.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI DOB NOW - Structural.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI_Applicant of Record.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI_Cost Estimate.pdf" />
+    <Content Include="JobDocumentPDFTemplate\RFI DOB NOW - Plumbing Sprinkle Standpipe.pdf" />
+    <Content Include="JobDocumentPDFTemplate\TR-8-2020.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Hydrant-Water-Use-Permit-Application.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW07.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW7-2021.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LF2-2021.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LFTA-2021.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LXCNE-2021.pdf" />
+    <Content Include="JobDocumentPDFTemplate\LPC-PAAF.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW308-85405.pdf" />
+    <Content Include="JobDocumentPDFTemplate\Topo Application Set 2021.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW-1 3-2022.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW-2 3-2022.pdf" />
+    <Content Include="JobDocumentPDFTemplate\AEU2-2021.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW7-2022.pdf" />
+    <Content Include="JobDocumentPDFTemplate\BINTAK-08-2022.pdf" />
+    <Content Include="JobDocumentPDFTemplate\tpp1-2022.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW-1-11-2022.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW-2-11-2022.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PA-1A-12-22.pdf" />
+    <Content Include="JobDocumentPDFTemplate\PW-7-11-22.pdf" />
+    <Content Include="JobDocumentPDFTemplate\WithdrawalRequest_form.pdf" />
+    <Content Include="JobDocumentPDFTemplate\lono_form.pdf" />
+    <Content Include="JobDocumentAddPageTemplate\PW_1A_1222.pdf" />
+    <Content Include="JobDocumentAddPageTemplate\PW1A_new.pdf" />
+    <Content Include="JobDocumentAddPageTemplate\PW1A_new123.pdf" />
+    <Content Include="JobDocumentPDFTemplate\CCD1-2023.pdf" />
+    <Content Include="JobDocumentPDFTemplate\cofo_worksheet.pdf" />
+    <Content Include="JobDocumentPDFTemplate\tm-1-2023.pdf" />
+    <Content Include="JobDocumentPDFTemplate\b-45m.pdf" />
+    <Content Include="ExportToExcelTemplate\Checklist_Template_Working.xlsx" />
+    <Content Include="ExportToExcelTemplate\Composite_TCO_Template.xlsx" />
+    <Content Include="ExportToExcelTemplate\Composite_Template.xlsx" />
+    <Content Include="ExportToExcelTemplate\Projects_ReportExportTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\AHV_PermitExpirationTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\ApplicationStatusTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\ClosedProjectsWithOpenBillingTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\CompletedScopeBillingPointTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\DEP_PermitExpirationTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\DOB_PermitExpirationTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\DOT_PermitExpirationTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\Overall_PermitExpirationTemplate - Copy.xlsx" />
+    <Content Include="ExportToExcelTemplate\ProposalReportTemplate - Copy.xlsx" />
+    <Content Include="HTML\fonts\AvenirNextLTPro-Regular.ttf" />
+    <Content Include="HTML\fonts\Avenir Next LT Pro Bold.ttf" />
+    <Content Include="ExportToExcelTemplate\AllViolationReportExportTemplateDOB.xlsx" />
+    <Content Include="ExportToExcelTemplate\AllViolationReportExportTemplateECB.xlsx" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\cui_prod.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\SwaggerConfig.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\CheckListApplicationDropDown.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\checklitItemTransmittalDTO.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\CheckListGroupHeader.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\ChecklistSearch.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\ChecklistSearchResponseDTO.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\CheckListViewDTO.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\ManageOrderDTO.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\ManageOrderGroups.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\PlumbingInsceptionResult.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\PlumbingInspectionDTO.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\PutPLInspectionDTO.cs" />
+    <Compile Include="Controllers\CheckListApplicationDropDown\Models\PLInspectionDueDateDTO.cs" />
+    <Compile Include="Controllers\CheckListGroups\CheckListGroupController.cs" />
+    <Compile Include="Controllers\CheckListGroups\Models\CheckListGroupDetail.cs" />
+    <Compile Include="Controllers\CheckListGroups\Models\CheckListGroupDTO.cs" />
+    <Compile Include="Controllers\ChecklistItems\ChecklistItemsController.cs" />
+    <Compile Include="Controllers\ChecklistItems\ManageOrderchecklistITemDTO.cs" />
+    <Compile Include="Controllers\ChecklistItems\ManageOrderItemGroups.cs" />
+    <Compile Include="Controllers\ChecklistItems\Models\ChecklistAddressPropertyMappingDTO.cs" />
+    <Compile Include="Controllers\ChecklistItems\Models\ChecklistItemDetail.cs" />
+    <Compile Include="Controllers\ChecklistItems\Models\ChecklistItemDTO.cs" />
+    <Compile Include="Controllers\ChecklistItems\Models\ChecklistItemPermitDTO.cs" />
+    <Compile Include="Controllers\CompanyLicenseTypes\CompanyLicenseTypesController.cs" />
+    <Compile Include="Controllers\CompanyLicenseTypes\Models\CompanyLicenseDTODetail.cs" />
+    <Compile Include="Controllers\CompanyLicenseTypes\Models\CompanyLicenseTypeDetail.cs" />
+    <Compile Include="Controllers\CompanyLicenseTypes\Models\CompanyLicenseTypeDTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\CompositeChecklistController.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\ChecklistViolationCommentDTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\CompositeChecklistDetailDTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\CompositeChecklistDTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\CompositeChecklistSearch.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\CompositeViolationDTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\CompositeViolationSearch.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\ForTCO_DTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\CompositeChecklistGroupHeader.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\JobCompositeViolationDTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\JobViolationDTO_checklist.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\ListofGeneralChecklist.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\ManageOrderDTO.cs" />
+    <Compile Include="Controllers\CompositeChecklist\Models\ManageOrderHeaders.cs" />
+    <Compile Include="Controllers\Contacts\Models\ContactList.cs" />
+    <Compile Include="Controllers\CronJobs\CronJobsController.cs" />
+    <Compile Include="Controllers\CronJobs\ViolationsJobsController.cs" />
+    <Compile Include="Controllers\CustomerNotifications\CustomerNotificationsController.cs" />
+    <Compile Include="Controllers\CustomerNotifications\Models\CustomerNotificationAdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\CustomerNotifications\Models\CustomerNotificationDetail.cs" />
+    <Compile Include="Controllers\CustomerNotifications\Models\CustomerNotificationDTO.cs" />
+    <Compile Include="Controllers\CustomerRPOController\CustomerRPOController.cs" />
+    <Compile Include="Controllers\Customer\CustomerAccountController.cs" />
+    <Compile Include="Controllers\Customer\CustomersAdminController.cs" />
+    <Compile Include="Controllers\Customer\Model\CustomerDetails.cs" />
+    <Compile Include="Controllers\Customer\Model\CustomerDTO.cs" />
+    <Compile Include="Controllers\Customer\Model\CustomerPermissionCreateOrUpdate.cs" />
+    <Compile Include="Controllers\DEPNoiseCodePenaltySchedules\DEPNoiseCodePenaltySchedulesController.cs" />
+    <Compile Include="Controllers\DEPNoiseCodePenaltySchedules\Models\DEPNoiseCodePenaltyScheduleDetail.cs" />
+    <Compile Include="Controllers\DEPNoiseCodePenaltySchedules\Models\DEPNoiseCodePenaltyScheduleDTO.cs" />
+    <Compile Include="Controllers\DocumentMaster\DocumentMastersController.cs" />
+    <Compile Include="Controllers\DocumentMaster\Models\DocumentMasterDetail.cs" />
+    <Compile Include="Controllers\DocumentMaster\Models\DocumentMasterDTO.cs" />
+    <Compile Include="Controllers\DOTPenaltySchedules\DOTPenaltySchedulesController.cs" />
+    <Compile Include="Controllers\DOTPenaltySchedules\Models\DOTPenaltyScheduleDetail.cs" />
+    <Compile Include="Controllers\DOTPenaltySchedules\Models\DOTPenaltyScheduleDTO.cs" />
+    <Compile Include="Controllers\DOHMHCoolingTowerPenaltySchedules\DOHMHCoolingTowerPenaltySchedulesController.cs" />
+    <Compile Include="Controllers\DOHMHCoolingTowerPenaltySchedules\Models\DOHMHCoolingTowerPenaltyScheduleDetail.cs" />
+    <Compile Include="Controllers\DOHMHCoolingTowerPenaltySchedules\Models\DOHMHCoolingTowerPenaltyScheduleDTO.cs" />
+    <Compile Include="Controllers\EmailTypes\Models\EmailTypeCreateUpdateDTO.cs" />
+    <Compile Include="Controllers\EmailTypes\Models\EmailTypeDefaultCCDetail.cs" />
+    <Compile Include="Controllers\FDNYPenaltySchedules\FDNYPenaltySchedulesController.cs" />
+    <Compile Include="Controllers\FDNYPenaltySchedules\Models\FDNYPenaltyScheduleDetail.cs" />
+    <Compile Include="Controllers\FDNYPenaltySchedules\Models\FDNYPenaltyScheduleDTO.cs" />
+    <Compile Include="Controllers\DOBPenaltySchedules\DOBPenaltySchedulesController.cs" />
+    <Compile Include="Controllers\DOBPenaltySchedules\Models\DOBPenaltyScheduleDetail.cs" />
+    <Compile Include="Controllers\DOBPenaltySchedules\Models\DOBPenaltyScheduleDTO.cs" />
+    <Compile Include="Controllers\Dashboards\DashboardAppointmentsController.cs" />
+    <Compile Include="Controllers\Dashboards\DashboardHearingDatesController.cs" />
+    <Compile Include="Controllers\Dashboards\DashboardTasksAssignedByYouController.cs" />
+    <Compile Include="Controllers\Dashboards\DashboardTasksAssignedToYouController.cs" />
+    <Compile Include="Controllers\Dashboards\Models\DashBoardTaskDTO.cs" />
+    <Compile Include="Controllers\Dashboards\Models\UpcomingAppointmentDTO.cs" />
+    <Compile Include="Controllers\Dashboards\Models\UpcomingHearingDateDTO.cs" />
+    <Compile Include="Controllers\GlobalSearch\GlobalSearchForCustomerController.cs" />
+    <Compile Include="Controllers\JobChecklist\CustomerJobChecklistController.cs" />
+    <Compile Include="Controllers\JobChecklist\JobChecklistController.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobChecklistClientNoteHistoryDTO.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobChecklistCommentHistoryDTO.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobChecklistHeaderDTO.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobChecklistItemDetailDTO.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobChecklistItemDueDateDTO.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobChecklistManualItem.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobChecklistProgressNoteDTO.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobPlumbingChecklistFloorsDTO.cs" />
+    <Compile Include="Controllers\JobChecklist\Models\JobPlumbingInspectionProgressNoteDTO.cs" />
+    <Compile Include="Controllers\JobDocument\JobDocumentController.cs" />
+    <Compile Include="Controllers\JobDocument\Models\CreateUpdatePW517.cs" />
+    <Compile Include="Controllers\JobDocument\Models\JobDocumentCreateOrUpdateDTO.cs" />
+    <Compile Include="Controllers\JobDocument\Models\JobDocumentDataTableParameters.cs" />
+    <Compile Include="Controllers\JobDocument\Models\JobDocumentFieldDTO.cs" />
+    <Compile Include="Controllers\JobDocument\Models\JobDocumentGetDetailsDTO.cs" />
+    <Compile Include="Controllers\JobDocument\Models\JobDocumentPermitDTO.cs" />
+    <Compile Include="Controllers\JobDocument\Models\JobDocumentVARPMTPermit.cs" />
+    <Compile Include="Controllers\JobDocument\Models\PullPermitDTO.cs" />
+    <Compile Include="Controllers\JobDocument\Models\PullPermitVARPMT.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeRFPProposal.cs" />
+    <Compile Include="Controllers\JobProgressNotes\JobProgressNotesController.cs" />
+    <Compile Include="Controllers\JobProgressNotes\Models\JobProgressNoteDetails.cs" />
+    <Compile Include="Controllers\JobProgressNotes\Models\JobProgressNoteDTO.cs" />
+    <Compile Include="Controllers\Jobs\JobsForCustomerController.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobsAdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobsForCustomerDTO.cs" />
+    <Compile Include="Controllers\JobTransmittals\JobTransmittalsController.cs" />
+    <Compile Include="Controllers\JobTransmittals\Models\JobTransmittalAttachmentDetails.cs" />
+    <Compile Include="Controllers\JobTransmittals\Models\JobTransmittalCCDetails.cs" />
+    <Compile Include="Controllers\JobTransmittals\Models\JobTransmittalDataTableParameters.cs" />
+    <Compile Include="Controllers\JobTransmittals\Models\JobTransmittalDetail.cs" />
+    <Compile Include="Controllers\JobTransmittals\Models\JobTransmittalDTO.cs" />
+    <Compile Include="Controllers\JobTransmittals\Models\JobTransmittalEmailDTO.cs" />
+    <Compile Include="Controllers\JobTransmittals\Models\JobTransmittalJobDocumentDetails.cs" />
+    <Compile Include="Controllers\JobViolations\JobDOBViolationsController.cs" />
+    <Compile Include="Controllers\JobViolations\Models\CompositeViolationsDTO.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobDOBViolationDTO.cs" />
+    <Compile Include="Controllers\JobViolations\Models\ViolationPartOfJobs.cs" />
+    <Compile Include="Controllers\NewsLetter\Models\NewsLetterDetail.cs" />
+    <Compile Include="Controllers\NewsLetter\Models\NewsLetterDTO.cs" />
+    <Compile Include="Controllers\NewsLetter\NewsLetterController.cs" />
+    <Compile Include="Controllers\NotificationSettings\Models\CustomerNotificationDetails.cs" />
+    <Compile Include="Controllers\NotificationSettings\NotificationSettingsController.cs" />
+    <Compile Include="Controllers\OwnerTypes\OwnerTypesController.cs" />
+    <Compile Include="Controllers\OwnerTypes\Models\OwnerTypeDetail.cs" />
+    <Compile Include="Controllers\OwnerTypes\Models\OwnerTypeDTO.cs" />
+    <Compile Include="Controllers\JobContactGroups\JobContactGroupDataTableParameters.cs" />
+    <Compile Include="Controllers\JobContactGroups\JobContactGroupsController.cs" />
+    <Compile Include="Controllers\JobContactGroups\Models\JobContactGroupDetail.cs" />
+    <Compile Include="Controllers\JobContactGroups\Models\JobContactGroupDTO.cs" />
+    <Compile Include="Controllers\JobApplicationTypes\Models\JobApplicationTypeCreateUpdate.cs" />
+    <Compile Include="Controllers\JobApplicationTypes\Models\JobApplicationTypeDetail.cs" />
+    <Compile Include="Controllers\JobApplicationTypes\Models\JobApplicationTypeDTO.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobStatusDTO.cs" />
+    <Compile Include="Controllers\JobWorkTypes\Models\JobWorkTypeDetail.cs" />
+    <Compile Include="Controllers\JobWorkTypes\Models\JobWorkTypeCreateUpdate.cs" />
+    <Compile Include="Controllers\JobWorkTypes\Models\JobWorkTypeDTO.cs" />
+    <Compile Include="Controllers\Dashboards\DashboardOverdueTasksController.cs" />
+    <Compile Include="Controllers\Reports\Models\AHVExpiryDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\AHVExpiryReport.cs" />
+    <Compile Include="Controllers\Reports\Models\ChecklistReportDatatableParameter.cs" />
+    <Compile Include="Controllers\Reports\Models\ChecklistReportDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\CompositeChecklistReportDatatableParameter.cs" />
+    <Compile Include="Controllers\Reports\Models\CompositeChecklistReportDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\ContactLicenceExpiryDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\ApplicationStatusDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\ApplicationStatusReportDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\ClosedJobsWithOpenBillingDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\ClosedJobsWithOpenBillingDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\CompletedScopeBillingPointDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\ContactLicenceExpiryDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\ContractorInsurancesExpiryDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\ContractorInsurancesExpiryDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\AllViolationDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\JobTimeNoteUnsynchDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\PermitsExpiryDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\AllViolationDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\PermitsExpiryDTO.cs" />
+    <Compile Include="Controllers\Reports\Models\OverallPermitDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\TimenoteUnsyncDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\ReportAHVExpiryController.cs" />
+    <Compile Include="Controllers\Reports\ReportChecklistController.cs" />
+    <Compile Include="Controllers\Reports\ReportClosedJobsWithOpenBillingsController.cs" />
+    <Compile Include="Controllers\Reports\ReportCompletedScopeBillingPointsController.cs" />
+    <Compile Include="Controllers\Reports\ReportApplicationStatusController.cs" />
+    <Compile Include="Controllers\Reports\ReportCompositeChecklistController.cs" />
+    <Compile Include="Controllers\Reports\ReportContactLicenceExpiryController.cs" />
+    <Compile Include="Controllers\Reports\ReportOverallPermitExpiryController.cs" />
+    <Compile Include="Controllers\Reports\ReportRfpsController.cs" />
+    <Compile Include="Controllers\Reports\ReportAllViolationsController.cs" />
+    <Compile Include="Controllers\Addresses\AddressDTO.cs" />
+    <Compile Include="Controllers\Addresses\AddressesController.cs" />
+    <Compile Include="Controllers\DEPCostSettings\DEPCostSettingsController.cs" />
+    <Compile Include="Controllers\DEPCostSettings\Models\DEPCostSettingDetail.cs" />
+    <Compile Include="Controllers\DEPCostSettings\Models\DEPCostSettingDTO.cs" />
+    <Compile Include="Controllers\HolidayCalenders\HolidayCalendersController.cs" />
+    <Compile Include="Controllers\HolidayCalenders\Models\HolidayCalenderDetail.cs" />
+    <Compile Include="Controllers\HolidayCalenders\Models\HolidayCalenderDTO.cs" />
+    <Compile Include="Controllers\AddressTypes\Models\AddressTypeDetail.cs" />
+    <Compile Include="Controllers\AddressTypes\Models\AddressTypeDTO.cs" />
+    <Compile Include="Controllers\AddressTypes\AddressTypesController.cs" />
+    <Compile Include="Controllers\AgentCertificates\AgentCertificatesController.cs" />
+    <Compile Include="Controllers\Boroughes\Models\BoroughDetail.cs" />
+    <Compile Include="Controllers\Boroughes\Models\BoroughDTO.cs" />
+    <Compile Include="Controllers\Companies\Models\BISRequestDTO.cs" />
+    <Compile Include="Controllers\Companies\Models\CompanyAdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\Companies\Models\CompanyEmailDTO.cs" />
+    <Compile Include="Controllers\CompanyTypes\Models\CompanyTypeDetail.cs" />
+    <Compile Include="Controllers\CompanyTypes\Models\CompanyTypeDTO.cs" />
+    <Compile Include="Controllers\CompanyTypes\CompanyTypesController.cs" />
+    <Compile Include="Controllers\ConstructionClassifications\Models\ConstructionClassificationDetail.cs" />
+    <Compile Include="Controllers\ConstructionClassifications\Models\ConstructionClassificationDTO.cs" />
+    <Compile Include="Controllers\ContactLicenseTypes\Models\ContactLicenseTypeDetail.cs" />
+    <Compile Include="Controllers\ContactLicenseTypes\Models\ContactLicenseTypeDTO.cs" />
+    <Compile Include="Controllers\Contacts\Models\ContactDetail.cs" />
+    <Compile Include="Controllers\Contacts\Models\ContactEmailDTO.cs" />
+    <Compile Include="Controllers\ContactTitles\Models\ContactTitleDTO.cs" />
+    <Compile Include="Controllers\ContactTitles\Models\ContactTitleDetail.cs" />
+    <Compile Include="Controllers\DocumentFields\Models\DocumentDetailsDTO.cs" />
+    <Compile Include="Controllers\DocumentFields\DocumentFieldDetailsController.cs" />
+    <Compile Include="Controllers\DocumentFields\Models\DocumentFieldDTO.cs" />
+    <Compile Include="Controllers\Documents\DocumentsController.cs" />
+    <Compile Include="Controllers\Documents\DocumentsDTO.cs" />
+    <Compile Include="Controllers\Employees\Models\EmployeePermissionCreateOrUpdate.cs" />
+    <Compile Include="Controllers\Groups\Models\GroupCreateOrUpdateDTO.cs" />
+    <Compile Include="Controllers\Groups\Models\GroupDetail.cs" />
+    <Compile Include="Controllers\Groups\Models\GroupDTO.cs" />
+    <Compile Include="Controllers\JobApplicationWorkPermits\Models\JobApplicationWorkPermitTypeCreateUpdate.cs" />
+    <Compile Include="Controllers\JobApplicationWorkPermits\Models\PersonResponsible.cs" />
+    <Compile Include="Controllers\JobApplicationWorkPermits\Models\WorkPermitDocumentReadResponse.cs" />
+    <Compile Include="Controllers\JobContacts\Models\ContactEmployeeDTO.cs" />
+    <Compile Include="Controllers\JobDocumentDropdown\JobDocumentDropdownController.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeScheduleCreateUpdate.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeScheduleInvoicedDate.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeScheduleInvoiceNumber.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeScheduleIsInvoiced.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeSchedulePONumber.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeScheduleSearchParameters.cs" />
+    <Compile Include="Controllers\JobMilestones\Models\JobMilestoneInvoicedDate.cs" />
+    <Compile Include="Controllers\JobMilestones\Models\JobMilestoneServiceDetail.cs" />
+    <Compile Include="Controllers\JobTimeNotes\Models\JobTimeNoteCreateUpdate.cs" />
+    <Compile Include="Controllers\JobTimeNotes\Models\JobTimeNoteDataTableParameters.cs" />
+    <Compile Include="Controllers\JobViolationNotes\Models\JobViolationNoteDetails.cs" />
+    <Compile Include="Controllers\JobViolationNotes\Models\JobViolationNoteDTO.cs" />
+    <Compile Include="Controllers\JobViolationNotes\Models\JobViolationNotesAdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\JobViolationNotes\JobViolationNotesController.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationFullyResolvedUpdate.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationResolveDateUpdate.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationDocumentDetail.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationExplanationOfChargesDTO.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationHearingDateUpdate.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationStatusUpdate.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobTimeNoteDataTableParameters.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationCreateUpdate.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationDetail.cs" />
+    <Compile Include="Controllers\JobViolationDocuments\JobViolationDocumentsController.cs" />
+    <Compile Include="Controllers\JobWorkPermitHistory\JobWorkPermitHistoryController.cs" />
+    <Compile Include="Controllers\JobWorkPermitHistory\Model\JobWorkPermitHistoryDTO.cs" />
+    <Compile Include="Controllers\Prefixes\Models\PrefixDetail.cs" />
+    <Compile Include="Controllers\Prefixes\Models\PrefixDTO.cs" />
+    <Compile Include="Controllers\Reports\ReportContractorInsurancesExpiryController.cs" />
+    <Compile Include="Controllers\Reports\ReportPermitsExpiryController.cs" />
+    <Compile Include="Controllers\Reports\Models\RfpDataTableParameters.cs" />
+    <Compile Include="Controllers\Reports\Models\RfpReportDTO.cs" />
+    <Compile Include="Controllers\Reports\TimenoteUnsyncReportController.cs" />
+    <Compile Include="Controllers\RfpAddresses\Models\RfpAddressDetail.cs" />
+    <Compile Include="Controllers\RfpProgressNotes\RfpProgressNotesController.cs" />
+    <Compile Include="Controllers\Rfps\Models\rfpListDTO.cs" />
+    <Compile Include="Controllers\TaskDocuments\TaskDocumentsController.cs" />
+    <Compile Include="Controllers\RfpDocuments\RfpDocumentsController.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpCreateUpdate.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpDetailDTO.cs" />
+    <Compile Include="Controllers\Suffixes\Models\SuffixDetail.cs" />
+    <Compile Include="Controllers\Suffixes\Models\SuffixDTO.cs" />
+    <Compile Include="Controllers\JobTimeNoteHistories\Models\JobTimeNoteHistoryDTO.cs" />
+    <Compile Include="Controllers\JobTimeNoteHistories\JobTimeNoteHistoryController.cs" />
+    <Compile Include="Controllers\TaskHistories\TaskHistoryController.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Controllers\TaskHistories\Models\TaskHistoryDTO.cs" />
+    <Compile Include="Controllers\JobHistories\Models\JobHistoryCreateOrUpdate.cs" />
+    <Compile Include="Controllers\JobMilestones\Models\JobMilestoneCreateUpdate.cs" />
+    <Compile Include="Controllers\JobMilestones\Models\JobMilestoneDTO.cs" />
+    <Compile Include="Controllers\JobMilestones\JobMilestonesController.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeScheduleDetail.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\Models\JobFeeScheduleDTO.cs" />
+    <Compile Include="Controllers\JobFeeSchedules\JobFeeSchedulesController.cs" />
+    <Compile Include="Controllers\Permissions\PermissionsController.cs" />
+    <Compile Include="Controllers\Permissions\Models\PermissionsDTO.cs" />
+    <Compile Include="Controllers\ReadPDF\ReadPDFController.cs" />
+    <Compile Include="Controllers\RfpServiceItems\Models\ServiceItemDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\LinkJobDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\MilestoneDetail.cs" />
+    <Compile Include="Controllers\Rfps\Models\MilestoneServiceDetail.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpFeeScheduleDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpProposalReviewDetail.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpProposalReviewDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpReviewerDetail.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpScopeContactTeam.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpScopeReviewDTO.cs" />
+    <Compile Include="Controllers\SystemSettings\Models\SystemSettingCreateOrUpdate.cs" />
+    <Compile Include="Controllers\SystemSettings\Models\SystemSettingDetail.cs" />
+    <Compile Include="Controllers\SystemSettings\Models\SystemSettingDTO.cs" />
+    <Compile Include="Controllers\SystemSettings\SystemSettingsController.cs" />
+    <Compile Include="Controllers\ReferenceLinks\Models\ReferenceLinkDetail.cs" />
+    <Compile Include="Controllers\ReferenceLinks\Models\ReferenceLinkDTO.cs" />
+    <Compile Include="Controllers\ReferenceLinks\ReferenceLinksController.cs" />
+    <Compile Include="Controllers\RfpFeeSchedules\Models\RfpFeeScheduleDetail.cs" />
+    <Compile Include="Controllers\RfpFeeSchedules\Models\RfpFeeScheduleDTO.cs" />
+    <Compile Include="Controllers\RfpFeeSchedules\RfpFeeSchedulesController.cs" />
+    <Compile Include="Controllers\RfpJobTypes\Models\RfpJobTypeInsertUpdate.cs" />
+    <Compile Include="Controllers\RfpReviewerTeams\Models\RfpReviewerTeamDetails.cs" />
+    <Compile Include="Controllers\RfpReviewerTeams\Models\RfpReviewerTeamDTO.cs" />
+    <Compile Include="Controllers\RfpReviewerTeams\RfpReviewerTeamsController.cs" />
+    <Compile Include="Controllers\RfpProgressNotes\Models\RfpProgressNoteDetails.cs" />
+    <Compile Include="Controllers\RfpProgressNotes\Models\RfpProgressNoteDTO.cs" />
+    <Compile Include="Controllers\RfpServiceItems\Models\RfpServiceItemDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpAdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpDetail.cs" />
+    <Compile Include="Controllers\TaskReminders\Models\TaskReminderDetail.cs" />
+    <Compile Include="Controllers\Tasks\Models\TasklistDTO.cs" />
+    <Compile Include="Controllers\Tasks\Models\WorkPermitTypeDTO.cs" />
+    <Compile Include="Controllers\Tasks\Models\TaskDueDateUpdate.cs" />
+    <Compile Include="Controllers\Tasks\Models\TaskStatusUpdate.cs" />
+    <Compile Include="Controllers\Tasks\Models\TaskAssignedToUpdate.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\UserNotifications\Models\UserNotificationAdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\UserNotifications\Models\UserNotificationDetail.cs" />
+    <Compile Include="Controllers\UserNotifications\Models\UserNotificationDTO.cs" />
+    <Compile Include="Controllers\UserNotifications\UserNotificationsController.cs" />
+    <Compile Include="Controllers\DocumentTypes\Models\DocumentTypeDetail.cs" />
+    <Compile Include="Controllers\DocumentTypes\Models\DocumentTypeDTO.cs" />
+    <Compile Include="Controllers\EmailTypes\Models\EmailTypeDetail.cs" />
+    <Compile Include="Controllers\EmailTypes\Models\EmailTypeDTO.cs" />
+    <Compile Include="Controllers\JobContactTypes\Models\JobContactTypeDetail.cs" />
+    <Compile Include="Controllers\JobContactTypes\Models\JobContactTypeDTO.cs" />
+    <Compile Include="Controllers\JobHistories\Models\JobHistoryAdvanceSearch.cs" />
+    <Compile Include="Controllers\Jobs\Models\AdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobAssign.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobDetailsDTO.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobProjectTeam.cs" />
+    <Compile Include="Controllers\JobTimeNoteCategorys\Models\JobTimeNoteCategoryDetail.cs" />
+    <Compile Include="Controllers\JobTimeNoteCategorys\Models\JobTimeNoteCategoryDTO.cs" />
+    <Compile Include="Controllers\JobTimeNotes\Models\JobTimeNoteDetail.cs" />
+    <Compile Include="Controllers\JobTimeNotes\Models\JobTimeNoteDTO.cs" />
+    <Compile Include="Controllers\MultipleDwellingClassifications\Models\MultipleDwellingClassificationDetail.cs" />
+    <Compile Include="Controllers\MultipleDwellingClassifications\Models\MultipleDwellingClassificationDTO.cs" />
+    <Compile Include="Controllers\OccupancyClassifications\Models\OccupancyClassificationDetail.cs" />
+    <Compile Include="Controllers\OccupancyClassifications\Models\OccupancyClassificationDTO.cs" />
+    <Compile Include="Controllers\PrimaryStructuralSystems\Models\PrimaryStructuralSystemDetail.cs" />
+    <Compile Include="Controllers\PrimaryStructuralSystems\Models\PrimaryStructuralSystemDTO.cs" />
+    <Compile Include="Controllers\RfpAddresses\Models\RfpAddressDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\ProjectDetailDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpProposalReviewCreateUpdate.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpScopeReviewCreateUpdate.cs" />
+    <Compile Include="Controllers\RfpServiceItems\Models\RfpServiceItemDetail.cs" />
+    <Compile Include="Controllers\RfpServiceItems\RfpServiceItemsController.cs" />
+    <Compile Include="Controllers\RfpServiceGroups\RfpServiceGroupsController.cs" />
+    <Compile Include="Controllers\RfpServiceGroups\Models\RfpServiceGroupDetail.cs" />
+    <Compile Include="Controllers\RfpServiceGroups\Models\RfpServiceGroupDTO.cs" />
+    <Compile Include="Controllers\RfpSubJobTypes\Models\RfpSubJobTypeDetail.cs" />
+    <Compile Include="Controllers\RfpSubJobTypes\Models\RfpSubJobTypeDTO.cs" />
+    <Compile Include="Controllers\RfpSubJobTypes\RfpSubJobTypesController.cs" />
+    <Compile Include="Controllers\RfpStatus\RfpStatusController.cs" />
+    <Compile Include="Controllers\Employees\Models\EmployeeDetail.cs" />
+    <Compile Include="Controllers\GlobalSearch\GlobalSearchController.cs" />
+    <Compile Include="Controllers\GlobalSearch\Models\GlobalSearchResponse.cs" />
+    <Compile Include="Controllers\GlobalSearch\Models\GlobalSearchType.cs" />
+    <Compile Include="Controllers\HubApiController.cs" />
+    <Compile Include="Controllers\Boroughes\BoroughsController.cs" />
+    <Compile Include="Controllers\Cities\CitiesController.cs" />
+    <Compile Include="Controllers\Companies\Models\BisDTO.cs" />
+    <Compile Include="Controllers\Companies\CompaniesController.cs" />
+    <Compile Include="Controllers\Companies\Models\CompanyDTO.cs" />
+    <Compile Include="Controllers\Companies\Models\CompanyDTODetail.cs" />
+    <Compile Include="Controllers\ConstructionClassifications\ConstructionClassificationsController.cs" />
+    <Compile Include="Controllers\Companies\Models\CompanyItem.cs" />
+    <Compile Include="Controllers\ContactLicenseTypes\ContactLicenseTypesController.cs" />
+    <Compile Include="Controllers\Contacts\Models\ContactDataTableParameters.cs" />
+    <Compile Include="Controllers\Contacts\Models\ContactDTODetail.cs" />
+    <Compile Include="Controllers\Contacts\Models\ContactDTO.cs" />
+    <Compile Include="Controllers\Contacts\Models\ContactLicenseDTODetail.cs" />
+    <Compile Include="Controllers\Contacts\ContactsController.cs" />
+    <Compile Include="Controllers\ContactTitles\ContactTitlesController.cs" />
+    <Compile Include="Controllers\DocumentTypes\DocumentTypesController.cs" />
+    <Compile Include="Controllers\EmailTypes\EmailTypesController.cs" />
+    <Compile Include="Controllers\EmployeeDocuments\EmployeeDocumentsController.cs" />
+    <Compile Include="Controllers\Employees\Models\EmployeeDto.cs" />
+    <Compile Include="Controllers\Employees\EmployeesController.cs" />
+    <Compile Include="Controllers\Groups\GroupsController.cs" />
+    <Compile Include="Controllers\RfpAddresses\Models\BisAddresRequestDTO.cs" />
+    <Compile Include="Controllers\RfpAddresses\Models\BisAddresResponseDTO.cs" />
+    <Compile Include="Controllers\RfpEmailHistories\RfpEmailHistoryController.cs" />
+    <Compile Include="Controllers\RfpEmailHistories\Models\RfpEmailHistoryDTO.cs" />
+    <Compile Include="Controllers\RfpJobTypes\Models\RfpJobTypeDetail.cs" />
+    <Compile Include="Controllers\RfpJobTypes\Models\RfpJobTypeDTO.cs" />
+    <Compile Include="Controllers\RfpJobTypes\RfpJobTypesController.cs" />
+    <Compile Include="Controllers\RfpSubJobTypeCategories\Models\RfpSubJobTypeCategoryDetail.cs" />
+    <Compile Include="Controllers\RfpSubJobTypeCategories\Models\RfpSubJobTypeCategoryDTO.cs" />
+    <Compile Include="Controllers\RfpSubJobTypeCategories\RfpSubJobTypeCategoriesController.cs" />
+    <Compile Include="Controllers\SeismicDesignCategories\Models\SeismicDesignCategoryDetail.cs" />
+    <Compile Include="Controllers\SeismicDesignCategories\Models\SeismicDesignCategoryDTO.cs" />
+    <Compile Include="Controllers\States\Models\StateDetail.cs" />
+    <Compile Include="Controllers\States\Models\StateDTO.cs" />
+    <Compile Include="Controllers\StructureOccupancyCategories\Models\StructureOccupancyCategoryDetail.cs" />
+    <Compile Include="Controllers\StructureOccupancyCategories\Models\StructureOccupancyCategoryDTO.cs" />
+    <Compile Include="Controllers\TaskNotes\Models\TaskNoteDetails.cs" />
+    <Compile Include="Controllers\TaskReminders\Models\TaskReminderDTO.cs" />
+    <Compile Include="Controllers\TaskReminders\TaskRemindersController.cs" />
+    <Compile Include="Controllers\Tasks\Models\TaskAdvancedSearchParameters.cs" />
+    <Compile Include="Controllers\Tasks\Models\TaskDetailsDTO.cs" />
+    <Compile Include="Controllers\Tasks\Models\TaskRequestDTO.cs" />
+    <Compile Include="Controllers\Tasks\Models\TaskResponseDTO.cs" />
+    <Compile Include="Controllers\Tasks\TasksController.cs" />
+    <Compile Include="Controllers\TaskTypes\Models\TaskTypeDetail.cs" />
+    <Compile Include="Controllers\TaskTypes\Models\TaskTypeDTO.cs" />
+    <Compile Include="Controllers\TaskTypes\TaskTypeController.cs" />
+    <Compile Include="Controllers\TaskStatus\TaskStatusController.cs" />
+    <Compile Include="Controllers\JobApplications\Models\JobApplicationDTODetail.cs" />
+    <Compile Include="Controllers\JobApplications\Models\JobApplicationDTO.cs" />
+    <Compile Include="Controllers\JobApplications\Models\JobApplicationDataTableParameters.cs" />
+    <Compile Include="Controllers\JobApplicationTypes\JobApplicationTypesController.cs" />
+    <Compile Include="Controllers\JobApplications\JobApplicationsController.cs" />
+    <Compile Include="Controllers\JobApplicationWorkPermits\Models\JobApplicationWorkPermitDTO.cs" />
+    <Compile Include="Controllers\JobApplicationWorkPermits\Models\JobApplicationWorkPermitDataTableParameters.cs" />
+    <Compile Include="Controllers\JobApplicationWorkPermits\JobApplicationWorkPermitsController.cs" />
+    <Compile Include="Controllers\JobContacts\Models\JobContactCreateDTO.cs" />
+    <Compile Include="Controllers\JobContacts\Models\JobContactDetailDTO.cs" />
+    <Compile Include="Controllers\JobContacts\Models\JobContactListDto.cs" />
+    <Compile Include="Controllers\JobContacts\JobContactsController.cs" />
+    <Compile Include="Controllers\JobHistories\Models\JobHistoryDTO.cs" />
+    <Compile Include="Controllers\Jobs\Models\GeneralNotesDTO.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobCreateOrUpdateDTO.cs" />
+    <Compile Include="Controllers\Jobs\JobsController.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobMilestoneDTO.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobScopeDTO.cs" />
+    <Compile Include="Controllers\Jobs\Models\JobsDTO.cs" />
+    <Compile Include="Controllers\TaskNotes\TaskNotesController.cs" />
+    <Compile Include="Controllers\JobTimeNotes\JobTimeNotesController.cs" />
+    <Compile Include="Controllers\JobContactTypes\JobContactTypesController.cs" />
+    <Compile Include="Controllers\JobApplicationStatus\JobApplicationStatusController.cs" />
+    <Compile Include="Controllers\JobHistories\JobHistoryController.cs" />
+    <Compile Include="Controllers\JobTimeNoteCategorys\JobTimeNoteCategoryController.cs" />
+    <Compile Include="Controllers\JobWorkTypes\JobWorkTypesController.cs" />
+    <Compile Include="Controllers\MultipleDwellingClassifications\MultipleDwellingClassificationsController.cs" />
+    <Compile Include="Controllers\OccupancyClassifications\OccupancyClassificationsController.cs" />
+    <Compile Include="Controllers\Prefixes\PrefixesController.cs" />
+    <Compile Include="Controllers\PrimaryStructuralSystems\PrimaryStructuralSystemsController.cs" />
+    <Compile Include="Controllers\ReferenceDocuments\Models\InMemoryMultipartFormDataStreamProvider.cs" />
+    <Compile Include="Controllers\ReferenceDocuments\ReferenceDocumentsController.cs" />
+    <Compile Include="Controllers\RfpAddresses\RfpAddressesController.cs" />
+    <Compile Include="Controllers\Rfps\ProjectDetailsController.cs" />
+    <Compile Include="Controllers\Rfps\ProposalReviewController.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpDTO.cs" />
+    <Compile Include="Controllers\Rfps\Models\RfpEmailDTO.cs" />
+    <Compile Include="Controllers\Rfps\RfpsController.cs" />
+    <Compile Include="Controllers\Rfps\ScopeReviewController.cs" />
+    <Compile Include="Controllers\SeismicDesignCategories\SeismicDesignCategoriesController.cs" />
+    <Compile Include="Controllers\States\StatesController.cs" />
+    <Compile Include="Controllers\StructureOccupancyCategories\StructureOccupancyCategoriesController.cs" />
+    <Compile Include="Controllers\Suffixes\SuffixesController.cs" />
+    <Compile Include="Controllers\TaxIdtypes\Models\TaxIdTypeDetail.cs" />
+    <Compile Include="Controllers\TaxIdtypes\Models\TaxIdTypeDTO.cs" />
+    <Compile Include="Controllers\TaxIdtypes\TaxIdTypesController.cs" />
+    <Compile Include="Controllers\TransmissionTypes\Models\TransmissionTypeCreateUpdateDTO.cs" />
+    <Compile Include="Controllers\TransmissionTypes\Models\TransmissionTypeDefaultCCDetail.cs" />
+    <Compile Include="Controllers\TransmissionTypes\Models\TransmissionTypeDetail.cs" />
+    <Compile Include="Controllers\TransmissionTypes\Models\TransmissionTypeDTO.cs" />
+    <Compile Include="Controllers\TransmissionTypes\TransmissionTypesController.cs" />
+    <Compile Include="Controllers\Users\CustomersController.cs" />
+    <Compile Include="Controllers\Users\Models\Menu.cs" />
+    <Compile Include="Controllers\Users\Models\UserDTO.cs" />
+    <Compile Include="Controllers\Users\Models\User_Customer_DTO.cs" />
+    <Compile Include="Controllers\Users\UsersController.cs" />
+    <Compile Include="Controllers\Verbiages\VerbiagesController.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationDTO.cs" />
+    <Compile Include="Controllers\JobViolations\Models\JobViolationGetInfoResponse.cs" />
+    <Compile Include="Controllers\JobViolations\JobViolationsController.cs" />
+    <Compile Include="Controllers\ViolationPaneltyCode\Models\ViolationPaneltyCodeDetails.cs" />
+    <Compile Include="Controllers\ViolationPaneltyCode\Models\ViolationPaneltyCodeDTO.cs" />
+    <Compile Include="Controllers\ViolationPaneltyCode\ViolationPaneltyCodeController.cs" />
+    <Compile Include="CustomHandler\Models\ApiLog.cs" />
+    <Compile Include="CustomHandler\Models\SqlErrorLogging.cs" />
+    <Compile Include="CustomHandler\RequestResponseHandler.cs" />
+    <Compile Include="CustomHandler\UnhandledExceptionLogger.cs" />
+    <Compile Include="DataTable\DataTableParameters.cs" />
+    <Compile Include="DataTable\DataTableResponse.cs" />
+    <Compile Include="DataTable\IQueryableMethods.cs" />
+    <Compile Include="DataTable\OrderedColumn.cs" />
+    <Compile Include="Enums\AddressProperties.cs" />
+    <Compile Include="Enums\DOTApplicationStatus.cs" />
+    <Compile Include="Enums\ApplicationType.cs" />
+    <Compile Include="Enums\Document.cs" />
+    <Compile Include="Enums\DocumentPlaceHolderField.cs" />
+    <Compile Include="Enums\Permission.cs" />
+    <Compile Include="Enums\StageofSpecialInspectionItem.cs" />
+    <Compile Include="Enums\SystemSetting.cs" />
+    <Compile Include="Filters\RpoAuthorizeActionFilter.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Filters\RpoAuthorizeAttribute.cs" />
+    <Compile Include="Hubs\GroupHub.cs" />
+    <Compile Include="Jobs\CompanyExpiryUpdate.cs" />
+    <Compile Include="Jobs\CustomerReminder.cs" />
+    <Compile Include="Jobs\DOBCompanyExpiryNotification.cs" />
+    <Compile Include="Jobs\DOTCompanyExpiryNotification.cs" />
+    <Compile Include="Jobs\JobApplicationPermitExpire.cs" />
+    <Compile Include="Jobs\JobDOBNowApplicationStatusUpdateResult.cs" />
+    <Compile Include="Jobs\JobDOBPermitStatusUpdateResult.cs" />
+    <Compile Include="Jobs\JobDOBApplicationStatusUpdateResult.cs" />
+    <Compile Include="Jobs\JobDOBUpdateResult.cs" />
+    <Compile Include="Jobs\JobDOBViolationUpdateResult.cs" />
+    <Compile Include="Jobs\JobDOTDOBExpiry.cs" />
+    <Compile Include="Jobs\JobECBViolationUpdateResult.cs" />
+    <Compile Include="Jobs\Register.cs" />
+    <Compile Include="Jobs\RfpJobs.cs" />
+    <Compile Include="Jobs\JobViolationUpdateResult.cs" />
+    <Compile Include="Jobs\RfpTwoDaysVARPMT.cs" />
+    <Compile Include="Jobs\TaskTypeMaster.cs" />
+    <Compile Include="Jobs\RfpStatusMaster.cs" />
+    <Compile Include="Jobs\RfpTwoDaysInDraftJob.cs" />
+    <Compile Include="Jobs\RfpTwoDaysInSubmittedUserNotificationJob.cs" />
+    <Compile Include="Jobs\RfpTwoDaysInDraftUserNotificationJob.cs" />
+    <Compile Include="Jobs\TaskReminderJob.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Tools\ClsApplicationStatus.cs" />
+    <Compile Include="Tools\Common.cs" />
+    <Compile Include="Tools\DropboxIntegration.cs" />
+    <Compile Include="Tools\EncryptDecrypt.cs" />
+    <Compile Include="Tools\EnumTaskStatus.cs" />
+    <Compile Include="Tools\ApplicationLog.cs" />
+    <Compile Include="Tools\Extensions.cs" />
+    <Compile Include="Tools\GenerateDocuments.cs" />
+    <Compile Include="Tools\GenerateJobDocumentEight.cs" />
+    <Compile Include="Tools\GenerateJobDocumentEleven.cs" />
+    <Compile Include="Tools\GenerateJobDocumentFourtheen.cs" />
+    <Compile Include="Tools\GenerateJobDocumentNine.cs" />
+    <Compile Include="Tools\GenerateJobDocuments.cs" />
+    <Compile Include="Tools\GenerateJobDocumentForth.cs" />
+    <Compile Include="Tools\GenerateJobDocumentFifth.cs" />
+    <Compile Include="Tools\GenerateJobDocumentSeven.cs" />
+    <Compile Include="Tools\GenerateJobDocumentSix.cs" />
+    <Compile Include="Tools\GenerateJobDocumentTen.cs" />
+    <Compile Include="Tools\GenerateJobDocumentThird.cs" />
+    <Compile Include="Tools\GenerateJobDocumentSecond.cs" />
+    <Compile Include="Tools\GenerateJobDocumentThirteen.cs" />
+    <Compile Include="Tools\GenerateJobDocumentTwelve.cs" />
+    <Compile Include="Tools\InAppNotificationMessage.cs" />
+    <Compile Include="Tools\JobHistoryMessages.cs" />
+    <Compile Include="Tools\Mail.cs" />
+    <Compile Include="Tools\NotificationMails.cs" />
+    <Compile Include="Tools\RfpTools.cs" />
+    <Compile Include="Tools\StaticMessages.cs" />
+    <Compile Include="Tools\TaskHistoryMessages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\JobDocumentDropdown\Models\" />
+    <Folder Include="Controllers\JobDocumentType\" />
+    <Folder Include="Documents\" />
+    <Folder Include="Log\" />
+    <Folder Include="Models\" />
+    <Folder Include="UploadedDocuments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rpo.ApiServices.Model\Rpo.ApiServices.Model.csproj">
+      <Project>{d5d1ae9b-ec2e-4e52-b47b-d3d3ad15d58e}</Project>
+      <Name>Rpo.ApiServices.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rpo.Identity.Core\Rpo.Identity.Core.csproj">
+      <Project>{6b5b5a2e-620a-4d91-9073-c56aac9c2b6b}</Project>
+      <Name>Rpo.Identity.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UAT|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Rpo.ApiServices.Api.xml</DocumentationFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.3.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

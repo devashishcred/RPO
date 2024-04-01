@@ -1,0 +1,15 @@
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Rpo.QuickBook.WebServices.dll.config
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Rpo.QuickBook.WebServices.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Rpo.QuickBook.WebServices.pdb
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\EntityFramework.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\EntityFramework.SqlServer.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Newtonsoft.Json.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Rpo.ApiServices.Model.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Rpo.Identity.Model.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\EntityFramework.xml
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\EntityFramework.SqlServer.xml
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\obj\Debug\Rpo.QuickBook.WebServices.csprojResolveAssemblyReference.cache
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\obj\Debug\Rpo.QuickBook.WebServices.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\Rpo.QuickBook.WebServices\obj\Debug\Rpo.QuickBook.WebServices.pdb

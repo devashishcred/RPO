@@ -1,0 +1,22 @@
+3/28/2024 4:42:03 AM: RFP In Draft To Admin Job Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: RFP Submitted To User Job Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Task Reminder Job Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job DOB Permit Status Update Scheduler Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job DOB Applicatoin Status execute cronjob : 3/27/2024 11:12:04 PM +00:00
+3/28/2024 4:42:04 AM: Job Violation Update Scheduler Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job ECB Violation execute cronjob : 3/27/2024 11:12:04 PM +00:00
+3/28/2024 4:42:04 AM: Job Violation Update Scheduler Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job DOB Violation execute cronjob : 3/27/2024 11:12:04 PM +00:00
+3/28/2024 4:42:04 AM: Job Violation Update Scheduler Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job Violation execute cronjob : 3/27/2024 11:12:04 PM +00:00
+3/28/2024 4:42:04 AM: Job DOB Applicatoin Status Update Scheduler Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job DOB Applicatoin Status execute cronjob : 3/27/2024 11:12:04 PM +00:00
+3/28/2024 4:42:04 AM: DOB Expire Job Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: DOT Expiry Job Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Company Expiry Job Notifications Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job DOB Now Applicatoin Status Update Scheduler Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job DOB Now Applicatoin Status execute cronjob : 3/27/2024 11:12:04 PM +00:00
+3/28/2024 4:42:04 AM: DOB Violation Update Scheduler Registered : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Job Violation execute cronjob : 3/27/2024 11:12:04 PM +00:00
+3/28/2024 4:42:04 AM: Method call at : Thursday, March 28, 2024
+3/28/2024 4:42:04 AM: Customer Reminder execute cronjob : 3/27/2024 11:12:04 PM +00:00

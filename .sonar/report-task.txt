@@ -1,0 +1,5 @@
+projectKey=sonar.org:rpoappang
+serverUrl=http://report.credencys.net:9000
+dashboardUrl=http://report.credencys.net:9000/dashboard/index/sonar.org:rpoappang
+ceTaskId=AWWJcCDl5l20bJ2Kk3uj
+ceTaskUrl=http://report.credencys.net:9000/api/ce/task?id=AWWJcCDl5l20bJ2Kk3uj

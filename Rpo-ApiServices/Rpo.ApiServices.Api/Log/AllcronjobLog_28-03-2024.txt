@@ -1,0 +1,48 @@
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the job DOB Permit Status cron job:Thursday, March 28, 2024
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the job DOB Applicatoin Status cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the job Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the job Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the job Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the job Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the job Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the job Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the job DOB Applicatoin Status cron job:Thursday, March 28, 2024
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the job DOB Applicatoin Status cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the job DOB Now Applicatoin Status cron job:Thursday, March 28, 2024
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the job DOB Now Applicatoin Status cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the DOB Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the DOB Violation cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To Intialize the Customer Reminder cron job
+-------------------End----------------------------
+-------------------Web Client Log Start-----------as on 04:42 AM
+Message: To End the Cutomer Reminder cron job
+-------------------End----------------------------

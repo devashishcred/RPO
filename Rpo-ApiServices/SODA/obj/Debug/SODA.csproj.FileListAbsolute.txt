@@ -1,0 +1,8 @@
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\bin\Debug\SODA.XML
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\bin\Debug\SODA.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\bin\Debug\SODA.pdb
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\bin\Debug\Newtonsoft.Json.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\bin\Debug\Newtonsoft.Json.xml
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\obj\Debug\SODA.csprojResolveAssemblyReference.cache
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\obj\Debug\SODA.dll
+E:\RPO\RNDP-2575\SnapCor\Rpo-ApiServices\SODA\obj\Debug\SODA.pdb
